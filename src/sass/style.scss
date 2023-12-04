@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+// Настройка с библиотекой
+
+// Изменить параметры по умолчанию
+@use 'library/sumbiot/general/variables' with (
+  $font-family-basic: #{"Oswaid", sans-serif},
+
+  $container: (
+    hd: (breakpoint: 1921px, max-width: 1920px)
+  )
+);
+
+// Шрифты
+@use "fonts";
+
+// Библиотека
+@use "library/sumbiot";
+
+// Блоки
+@use "components/logo";
+@use "components/logout";
+@use "components/burger";
+@use "components/navigation";
+@use "components/menu";
+@use "components/options";
+@use "components/title";
+@use "components/alert";
+
+@use "components/page";
+@use "components/header";
+@use "components/navigation-index";
+@use "components/inner";
+@use "components/select";
+@use "components/content";
+@use "components/table";
+@use "components/indicator";
+@use "components/footer";
+
+

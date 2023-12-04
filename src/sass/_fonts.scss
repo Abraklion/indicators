@@ -1,0 +1,25 @@
+@use "mixins" as m;
+
+//-----===== Подключение шрифтов ====-----//
+
+// Oswaid-300 - latin_cyrillic
+@include m.fontInclude("Oswaid","oswald-300",normal,300,"Oswaid-Light");
+
+// Oswaid-400 - latin_cyrillic
+@include m.fontInclude("Oswaid","oswald-400",normal,400,"Oswaid-Regular");
+
+// Oswaid-500 - latin_cyrillic
+@include m.fontInclude("Oswaid","oswald-500",normal,500,"Oswaid-Medium");
+
+// Oswaid-700 - latin_cyrillic
+@include m.fontInclude("Oswaid","oswald-700",normal,700,"Oswaid-Bold");
+
+
+// Oswaid-400 - latin_cyrillic
+@include m.fontInclude("Оpen-Sans","open-sans-400",normal,400,"Оpen-Sans-Regular");
+
+// Oswaid-600 - latin_cyrillic
+@include m.fontInclude("Оpen-Sans","open-sans-600",normal,600,"Оpen-Sans-Medium");
+
+// Oswaid-700 - latin_cyrillic
+@include m.fontInclude("Оpen-Sans","open-sans-700",normal,700,"Оpen-Sans-Bold");

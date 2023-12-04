@@ -1,0 +1,167 @@
+
+<section class="sModal sModal--filter" id="modal-filter" data-sumbiot-overlay="false" data-sumbiot-overflow="false" data-sumbiot-modal="1">
+
+  <h2 class="sModal__title">Фильтр показателей</h2>
+
+  <div class="sModal__inner">
+
+    <form class="sForm">
+
+      <h3 class="sForm__title title">Основные</h3>
+
+      <div class="sForm__inner">
+
+        {{#each indicators.basic}}
+          <label class="sForm__item">
+            <input class="sForm__checkbox" type="checkbox" value="{{this}}">
+            <span>{{this}}</span>
+          </label><!--/.sForm__item-->
+        {{/each}}
+
+      </div><!--/.sForm__inner-->
+
+
+      <h3 class="sForm__title title">Разное</h3>
+
+      <div class="sForm__inner">
+
+        {{#each indicators.other}}
+          <label class="sForm__item">
+            <input class="sForm__checkbox" type="checkbox" value="{{this}}">
+            <span>{{this}}</span>
+          </label><!--/.sForm__item-->
+        {{/each}}
+
+        <div class="sForm__item">
+          <button class="sForm__button btn" type="button">Применить</button>
+          <button class="sForm__button btn" type="button">Выбрать все</button>
+        </div><!--/.sForm__item-->
+
+      </div><!--/.sForm__inner-->
+
+    </form><!--./sForm-->
+
+  </div><!--./modal__inner-->
+
+  <button type="button" class="sModal__close" data-sumbiot-modal-close title="Закрыть окно"></button>
+
+</section><!--./modal-->
+
+<section class="sModal sModal--quick" id="modal-quick-access" data-sumbiot-overlay="false" data-sumbiot-overflow="false" data-sumbiot-modal="1">
+
+  <h2 class="sModal__title">Быстрый доступ</h2>
+
+  <div class="sModal__inner">
+
+    <div class="sForm">
+
+      <h3 class="sForm__title title">Основные</h3>
+
+      <div class="sForm__inner">
+
+        {{#each indicators.basic}}
+          <div class="sForm__item">
+            <a class="sForm__link" href="#">{{this}}</a>
+          </div><!--/.sForm__item-->
+        {{/each}}
+
+      </div><!--/.sForm__inner-->
+
+
+      <h3 class="sForm__title title">Разное</h3>
+
+      <div class="sForm__inner">
+
+        {{#each indicators.other}}
+        <div class="sForm__item">
+          <a class="sForm__link" href="#">{{this}}</a>
+        </div><!--/.sForm__item-->
+        {{/each}}
+
+      </div><!--/.sForm__inner-->
+
+    </div><!--./sForm-->
+
+  </div><!--./modal__inner-->
+
+  <button type="button" class="sModal__close" data-sumbiot-modal-close title="Закрыть окно"></button>
+
+</section><!--./modal-->
+
+<section class="sModal sModal--collation" id="modal-collation" data-sumbiot-overlay="false" data-sumbiot-overflow="false" data-sumbiot-modal="1">
+
+  <h2 class="sModal__title">Сверка показателей</h2>
+
+  <div class="sModal__inner">
+
+    <div class="sForm">
+
+      <h3 class="sForm__title title">ГОД</h3>
+
+      <div class="sForm__inner">
+
+        <div class="sForm__linear">
+
+          {{#each unit.year}}
+            <label class="sForm__item">
+              <input class="sForm__checkbox" type="checkbox" name="year" value="{{this}}">
+              <span>{{this}}</span>
+            </label><!--/.sForm__item-->
+          {{/each}}
+
+        </div><!--/.sForm__linear-->
+
+      </div><!--/.sForm__inner-->
+
+      <h3 class="sForm__title title">Месяц</h3>
+
+      <div class="sForm__inner">
+
+        <div class="sForm__linear">
+
+          {{#each unit.month}}
+            <label class="sForm__item">
+              <input class="sForm__checkbox" type="checkbox" name="month" value="{{this.n}}">
+              <span>{{this.name}}</span>
+            </label><!--/.sForm__item-->
+          {{/each}}
+
+        </div><!--/.sForm__linear-->
+
+      </div><!--/.sForm__inner-->
+
+      <h3 class="sForm__title title">Показатели</h3>
+
+      <div class="sForm__inner">
+
+        <div class="sForm__linear">
+
+          {{#each indicators.basic}}
+            <label class="sForm__item">
+              <input class="sForm__checkbox" type="checkbox" name="indicator" value="{{this}}">
+              <span>{{this}}</span>
+            </label><!--/.sForm__item-->
+          {{/each}}
+
+          {{#each indicators.other}}
+            <label class="sForm__item">
+              <input class="sForm__checkbox" type="checkbox" name="indicator" value="{{this}}">
+              <span>{{this}}</span>
+            </label><!--/.sForm__item-->
+          {{/each}}
+
+        </div><!--/.sForm__linear-->
+
+        <div class="sForm__item">
+          <button class="sForm__button btn" type="submit">Сформировать</button>
+        </div><!--/.sForm__item-->
+
+      </div><!--/.sForm__inner-->
+
+    </div><!--./sForm-->
+
+  </div><!--./modal__inner-->
+
+  <button type="button" class="sModal__close" data-sumbiot-modal-close title="Закрыть окно"></button>
+
+</section><!--./modal-->
