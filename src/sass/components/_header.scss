@@ -1,16 +1,38 @@
+@use "../variables" as v;
 
 .header {
+  position: relative;
+  z-index: 100;
 
+  background-color: #1D2027;
+  background-image: url('../img/bg-black.jpg');
+  background-position: 0 0;
+  background-repeat: repeat;
+
+  box-shadow: 0 4px 4px 0 rgba(v.$black,0.25);
+
+  &--sticky {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
 }
 
 .header__inner {
+  height: 65px;
 
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header__logo {
+  width: 220px;
+  height: 75px;
 
+  margin-left: -12px;
 }
 
 .header__navigation {
-
 }

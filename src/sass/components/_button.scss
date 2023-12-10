@@ -1,4 +1,12 @@
-@use "../variables" as v;
-@use "../library/sumbiot/general/mixins/components/button" as mB;
 
-@include mB.button();
+.sBtn {
+  font-family: Oswald, sans-serif;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+
+  line-height: 16px;
+
+  text-transform: uppercase;
+}

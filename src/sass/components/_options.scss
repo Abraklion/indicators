@@ -1,18 +1,44 @@
+@use "../variables" as v;
 
 .options {
+  padding: 18px 16px 30px 16px;
 
+  background: #FDFDFD;
+
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 0 4px 0 rgba(v.$black, 0.25), 0 2px 4px 0 rgba(v.$black, 0.25);
+
+  &--edit {
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-bottom: 16px;
+  }
 }
 
 .options__burger {
+  display: block;
 
+  margin: 0 auto;
+
+  .options--edit & {
+    margin-top: -4px;
+  }
 }
 
 .options__list {
-
+  padding: 0;
+  margin: 55px 0 0 0;
+  list-style: none;
 }
 
 .options__item {
+  position: relative;
 
+  margin: 0 0 30px 0;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .options__btn {

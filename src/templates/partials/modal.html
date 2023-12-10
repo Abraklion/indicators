@@ -1,41 +1,39 @@
 
-<section class="sModal sModal--filter" id="modal-filter" data-sumbiot-overlay="false" data-sumbiot-overflow="false" data-sumbiot-modal="1">
+<section class="sModal sModal--option sModal--filter" id="modal-filter" data-sumbiot-overlay="false" data-sumbiot-overflow="false" data-sumbiot-modal="1">
 
   <h2 class="sModal__title">Фильтр показателей</h2>
 
   <div class="sModal__inner">
 
-    <form class="sForm">
+    <form class="sForm sForm--option">
 
-      <h3 class="sForm__title title">Основные</h3>
+      <h3 class="sForm__title title title--line">
+        <span>Основные</span>
+      </h3>
 
       <div class="sForm__inner">
 
         {{#each indicators.basic}}
-          <label class="sForm__item">
-            <input class="sForm__checkbox" type="checkbox" value="{{this}}">
-            <span>{{this}}</span>
-          </label><!--/.sForm__item-->
+        <label class="sForm__item sForm__item--checkbox">
+          <input class="sForm__checkbox visually-hidden" type="checkbox" value="{{this}}">
+          <span class="sForm__label">{{this}}</span>
+        </label><!--/.sForm__item-->
         {{/each}}
 
       </div><!--/.sForm__inner-->
 
-
-      <h3 class="sForm__title title">Разное</h3>
+      <h3 class="sForm__title title title--line">
+        <span>Разное</span>
+      </h3>
 
       <div class="sForm__inner">
 
         {{#each indicators.other}}
-          <label class="sForm__item">
-            <input class="sForm__checkbox" type="checkbox" value="{{this}}">
-            <span>{{this}}</span>
-          </label><!--/.sForm__item-->
+        <label class="sForm__item sForm__item--checkbox">
+          <input class="sForm__checkbox visually-hidden" type="checkbox" value="{{this}}">
+          <span class="sForm__label">{{this}}</span>
+        </label><!--/.sForm__item-->
         {{/each}}
-
-        <div class="sForm__item">
-          <button class="sForm__button btn" type="button">Применить</button>
-          <button class="sForm__button btn" type="button">Выбрать все</button>
-        </div><!--/.sForm__item-->
 
       </div><!--/.sForm__inner-->
 
@@ -43,32 +41,41 @@
 
   </div><!--./modal__inner-->
 
+  <div class="sD-flex sF-justify-content-between sPr-16">
+    <button class="sForm__button btn btn--green" type="button">Применить</button>
+    <button class="sForm__button btn" type="button">Выбрать все</button>
+  </div><!--/.sForm__item-->
+
   <button type="button" class="sModal__close" data-sumbiot-modal-close title="Закрыть окно"></button>
 
 </section><!--./modal-->
 
-<section class="sModal sModal--quick" id="modal-quick-access" data-sumbiot-overlay="false" data-sumbiot-overflow="false" data-sumbiot-modal="1">
+<section class="sModal sModal--option sModal--quick" id="modal-quick" data-sumbiot-overlay="false" data-sumbiot-overflow="false" data-sumbiot-modal="1">
 
   <h2 class="sModal__title">Быстрый доступ</h2>
 
   <div class="sModal__inner">
 
-    <div class="sForm">
+    <div class="sForm sForm--option">
 
-      <h3 class="sForm__title title">Основные</h3>
+      <h3 class="sForm__title title title--line">
+        <span>Основные</span>
+      </h3>
 
       <div class="sForm__inner">
 
         {{#each indicators.basic}}
-          <div class="sForm__item">
-            <a class="sForm__link" href="#">{{this}}</a>
-          </div><!--/.sForm__item-->
+        <div class="sForm__item">
+          <a class="sForm__link" href="#">{{this}}</a>
+        </div><!--/.sForm__item-->
         {{/each}}
 
       </div><!--/.sForm__inner-->
 
 
-      <h3 class="sForm__title title">Разное</h3>
+      <h3 class="sForm__title title title--line">
+        <span>Разное</span>
+      </h3>
 
       <div class="sForm__inner">
 
@@ -88,80 +95,1479 @@
 
 </section><!--./modal-->
 
-<section class="sModal sModal--collation" id="modal-collation" data-sumbiot-overlay="false" data-sumbiot-overflow="false" data-sumbiot-modal="1">
+<section class="sModal sModal--fixed sModal--quick-result" id="modal-quick-result" data-sumbiot-overlay="false" data-sumbiot-overflow="false" data-sumbiot-modal="1">
+
+  <div class="sModal__inner">
+
+    <div class="table">
+
+      <div class="table__header">
+
+        <div class="indicator indicator--header">
+          <div class="indicator__unit">Цель</div>
+
+          <div class="indicator__value yellow strong">Холдинг</div>
+          <div class="indicator__value">ОЗНА-ИС</div>
+          <div class="indicator__value yellow">ОЗНА+</div>
+          <div class="indicator__value">ОЗНА-инжиниринг</div>
+          <div class="indicator__value">АК ОЗНА</div>
+        </div>
+
+      </div><!--/.table__header-->
+
+      <div class="table__body">
+
+        <!-- Входящий денежный поток - start -->
+        <article class="indicator g-3">
+          <h3 class="indicator__title title">Входящий денежный поток</h3>
+
+          <!-- год - start -->
+          <div class="indicator__inner g-3-120">
+            <div class="indicator__unit">Год</div>
+
+            <div class="indicator__name">Цель</div>
+            <div class="indicator__name">Факт</div>
+            <div class="indicator__name">Отк</div>
+
+            <!-- холдинг/год - start -->
+            <div class="indicator__value yellow strong">17 031 957</div>
+            <div class="indicator__value yellow strong">11 773 448</div>
+            <div class="indicator__value yellow strong">10 963 449</div>
+            <!-- холдинг/год - end -->
+
+            <!-- озна-ис/год - start -->
+            <div class="indicator__value">6 128 508</div>
+            <div class="indicator__value">5 697 910</div>
+            <div class="indicator__value">-430 598</div>
+            <!-- озна-ис/год - end -->
+
+            <!-- озна+/год - start -->
+            <div class="indicator__value yellow">10 963 449</div>
+            <div class="indicator__value yellow">6 152 724</div>
+            <div class="indicator__value yellow">-4 810 725</div>
+            <!-- озна+/год - end -->
+
+            <!-- озна-инжиниринг/год - start -->
+            <div class="indicator__value">7 304 128</div>
+            <div class="indicator__value">7 304 128</div>
+            <div class="indicator__value">-2 907 316</div>
+            <!-- озна-инжиниринг/год - end -->
+
+            <!-- ак озна/год - start -->
+            <div class="indicator__value">4 272 553</div>
+            <div class="indicator__value">4 272 553</div>
+            <div class="indicator__value">4 272 553</div>
+            <!-- ак озна/год - end -->
+          </div>
+          <!-- год - end -->
+
+          <!-- квартал - start -->
+          <div class="indicator__inner g-3-120">
+            <div class="indicator__unit">Квартал</div>
+
+            <div class="indicator__name">План</div>
+            <div class="indicator__name">Факт</div>
+            <div class="indicator__name">Отк</div>
+
+            <!-- холдинг/квартал - start -->
+            <div class="indicator__value yellow strong">7 031 957</div>
+            <div class="indicator__value yellow strong">1 773 448</div>
+            <div class="indicator__value yellow strong">963 449</div>
+            <!-- холдинг/квартал - end -->
+
+            <!-- озна-ис/квартал - start -->
+            <div class="indicator__value">128 508</div>
+            <div class="indicator__value">697 910</div>
+            <div class="indicator__value">-30 598</div>
+            <!-- озна-ис/квартал - end -->
+
+            <!-- озна+/квартал - start -->
+            <div class="indicator__value yellow">1 963 449</div>
+            <div class="indicator__value yellow">6 152 724</div>
+            <div class="indicator__value yellow">-4 810 725</div>
+            <!-- озна+/квартал - end -->
+
+            <!-- озна-инжиниринг/квартал - start -->
+            <div class="indicator__value">304 128</div>
+            <div class="indicator__value">304 128</div>
+            <div class="indicator__value">-907 316</div>
+            <!-- озна-инжиниринг/квартал - end -->
+
+            <!-- ак озна/квартал - start -->
+            <div class="indicator__value">272 553</div>
+            <div class="indicator__value">272 553</div>
+            <div class="indicator__value">272 553</div>
+            <!-- ак озна/квартал - end -->
+          </div>
+          <!-- квартал - end -->
+
+          <!-- месяц - start -->
+          <div class="indicator__inner g-3-120">
+            <div class="indicator__unit">Месяц</div>
+
+            <div class="indicator__name">План</div>
+            <div class="indicator__name">Факт</div>
+            <div class="indicator__name">Отк</div>
+
+            <!-- холдинг/месяц - start -->
+            <div class="indicator__value yellow strong">1 456 632</div>
+            <div class="indicator__value yellow strong red">291 564</div>
+            <div class="indicator__value yellow strong">-1 165 068</div>
+            <!-- холдинг/месяц - end -->
+
+            <!-- озна-ис/месяц - start -->
+            <div class="indicator__value">897 564</div>
+            <div class="indicator__value green">-273 410</div>
+            <div class="indicator__value">-624 154</div>
+            <!-- озна-ис/месяц - end -->
+
+            <!-- озна+/месяц - start -->
+            <div class="indicator__value yellow">414 068</div>
+            <div class="indicator__value yellow green">18 154</div>
+            <div class="indicator__value yellow">-395 914</div>
+            <!-- озна+/месяц - end -->
+
+            <!-- озна-инжиниринг/месяц - start -->
+            <div class="indicator__value">176 505</div>
+            <div class="indicator__value red">15 017</div>
+            <div class="indicator__value">-161 488</div>
+            <!-- озна-инжиниринг/месяц - end -->
+
+            <!-- ак озна/месяц - start -->
+            <div class="indicator__value">387 563</div>
+            <div class="indicator__value green">3 137</div>
+            <div class="indicator__value">-384 426</div>
+            <!-- ак озна/месяц - end -->
+          </div>
+          <!-- месяц - end -->
+
+        </article>
+        <!-- Входящий денежный поток - end -->
+
+      </div><!--/.table__body-->
+
+    </div><!--/.table-->
+
+    <div class="sModal__title">январь 2023</div>
+
+    <button type="button" class="sModal__close" data-sumbiot-modal-close title="Закрыть окно"></button>
+
+  </div><!--./modal__inner-->
+
+</section><!--./modal-->
+
+<section class="sModal sModal--option sModal--collation" id="modal-collation" data-sumbiot-overlay="false" data-sumbiot-overflow="false" data-sumbiot-modal="1">
 
   <h2 class="sModal__title">Сверка показателей</h2>
 
   <div class="sModal__inner">
 
-    <div class="sForm">
+    <form class="sForm sForm--option">
 
-      <h3 class="sForm__title title">ГОД</h3>
+      <h3 class="sForm__title title title--line sMb-20">
+        <span>ГОД</span>
+      </h3>
 
       <div class="sForm__inner">
 
-        <div class="sForm__linear">
+        <div class="sForm__linear sForm__linear--v1">
 
           {{#each unit.year}}
-            <label class="sForm__item">
-              <input class="sForm__checkbox" type="checkbox" name="year" value="{{this}}">
-              <span>{{this}}</span>
-            </label><!--/.sForm__item-->
+          <label class="sForm__item sForm__item--checkbox">
+            <input class="sForm__checkbox visually-hidden" type="checkbox" name="year" value="{{this}}">
+            <span class="sForm__label sForm__label--ml sForm__label--fz">{{this}}</span>
+          </label><!--/.sForm__item-->
           {{/each}}
 
         </div><!--/.sForm__linear-->
 
       </div><!--/.sForm__inner-->
 
-      <h3 class="sForm__title title">Месяц</h3>
+      <h3 class="sForm__title title title--line sMb-20">
+        <span>Месяц</span>
+      </h3>
 
       <div class="sForm__inner">
 
-        <div class="sForm__linear">
+        <div class="sForm__linear sForm__linear--v2">
 
           {{#each unit.month}}
-            <label class="sForm__item">
-              <input class="sForm__checkbox" type="checkbox" name="month" value="{{this.n}}">
-              <span>{{this.name}}</span>
-            </label><!--/.sForm__item-->
+          <label class="sForm__item sForm__item--checkbox">
+            <input class="sForm__checkbox visually-hidden" type="checkbox" name="month" value="{{this.n}}">
+            <span class="sForm__label sForm__label--ml sForm__label--fz sFz-14 sText-transform-none">{{this.name}}</span>
+          </label><!--/.sForm__item-->
           {{/each}}
 
         </div><!--/.sForm__linear-->
 
       </div><!--/.sForm__inner-->
 
-      <h3 class="sForm__title title">Показатели</h3>
+      <h3 class="sForm__title title title--line sMb-20">
+        <span>Показатели</span>
+      </h3>
 
       <div class="sForm__inner">
 
-        <div class="sForm__linear">
+        <div class="sForm__linear sForm__linear--v3">
 
           {{#each indicators.basic}}
-            <label class="sForm__item">
-              <input class="sForm__checkbox" type="checkbox" name="indicator" value="{{this}}">
-              <span>{{this}}</span>
-            </label><!--/.sForm__item-->
+          <label class="sForm__item sForm__item--checkbox">
+            <input class="sForm__checkbox visually-hidden" type="checkbox" name="indicator" value="{{this}}">
+            <span class="sForm__label">{{this}}</span>
+          </label><!--/.sForm__item-->
           {{/each}}
 
           {{#each indicators.other}}
-            <label class="sForm__item">
-              <input class="sForm__checkbox" type="checkbox" name="indicator" value="{{this}}">
-              <span>{{this}}</span>
-            </label><!--/.sForm__item-->
+          <label class="sForm__item sForm__item--checkbox">
+            <input class="sForm__checkbox visually-hidden" type="checkbox" name="indicator" value="{{this}}">
+            <span class="sForm__label">{{this}}</span>
+          </label><!--/.sForm__item-->
           {{/each}}
 
         </div><!--/.sForm__linear-->
 
-        <div class="sForm__item">
-          <button class="sForm__button btn" type="submit">Сформировать</button>
-        </div><!--/.sForm__item-->
-
       </div><!--/.sForm__inner-->
 
-    </div><!--./sForm-->
+    </form><!--./sForm-->
 
   </div><!--./modal__inner-->
 
+  <div class="sD-flex sF-justify-content-between sPr-16">
+    <button class="sForm__button btn btn--green" type="submit">Сформировать</button>
+    <button class="sForm__button btn" type="reset">Сбросить</button>
+  </div><!--/.sForm__item-->
+
   <button type="button" class="sModal__close" data-sumbiot-modal-close title="Закрыть окно"></button>
+
+</section><!--./modal-->
+
+<section class="sModal sModal--fixed sModal--collation-result" id="modal--collation-result" data-sumbiot-overlay="false" data-sumbiot-overflow="false" data-sumbiot-modal="1">
+
+  <div class="sModal__inner">
+
+    <div class="accordion">
+
+      <!-- Акардион 1 уровня - start -->
+      <div class="accordion__head active">
+        <span>2023</span>
+      </div>
+
+      <div class="accordion__block">
+
+        <!-- Акардион 2 уровня - start -->
+        <div class="accordion__head active sPl-106 sFw-400">
+          <span>Март</span>
+        </div>
+
+        <div class="accordion__block">
+
+          <div class="table">
+
+            <div class="table__header">
+
+              <div class="indicator indicator--header">
+                <div class="indicator__unit">Цель</div>
+
+                <div class="indicator__value yellow strong">Холдинг</div>
+                <div class="indicator__value">ОЗНА-ИС</div>
+                <div class="indicator__value yellow">ОЗНА+</div>
+                <div class="indicator__value">ОЗНА-инжиниринг</div>
+                <div class="indicator__value">АК ОЗНА</div>
+              </div>
+
+            </div><!--/.table__header-->
+
+            <div class="table__body">
+
+              <!-- Входящий денежный поток - start -->
+              <article class="indicator g-3">
+                <h3 class="indicator__title title">Входящий денежный поток</h3>
+
+                <!-- год - start -->
+                <div class="indicator__inner g-3-120">
+                  <div class="indicator__unit">Год</div>
+
+                  <div class="indicator__name">Цель</div>
+                  <div class="indicator__name">Факт</div>
+                  <div class="indicator__name">Отк</div>
+
+                  <!-- холдинг/год - start -->
+                  <div class="indicator__value yellow strong">17 031 957</div>
+                  <div class="indicator__value yellow strong">11 773 448</div>
+                  <div class="indicator__value yellow strong">10 963 449</div>
+                  <!-- холдинг/год - end -->
+
+                  <!-- озна-ис/год - start -->
+                  <div class="indicator__value">6 128 508</div>
+                  <div class="indicator__value">5 697 910</div>
+                  <div class="indicator__value">-430 598</div>
+                  <!-- озна-ис/год - end -->
+
+                  <!-- озна+/год - start -->
+                  <div class="indicator__value yellow">10 963 449</div>
+                  <div class="indicator__value yellow">6 152 724</div>
+                  <div class="indicator__value yellow">-4 810 725</div>
+                  <!-- озна+/год - end -->
+
+                  <!-- озна-инжиниринг/год - start -->
+                  <div class="indicator__value">7 304 128</div>
+                  <div class="indicator__value">7 304 128</div>
+                  <div class="indicator__value">-2 907 316</div>
+                  <!-- озна-инжиниринг/год - end -->
+
+                  <!-- ак озна/год - start -->
+                  <div class="indicator__value">4 272 553</div>
+                  <div class="indicator__value">4 272 553</div>
+                  <div class="indicator__value">4 272 553</div>
+                  <!-- ак озна/год - end -->
+                </div>
+                <!-- год - end -->
+
+                <!-- квартал - start -->
+                <div class="indicator__inner g-3-120">
+                  <div class="indicator__unit">Квартал</div>
+
+                  <div class="indicator__name">План</div>
+                  <div class="indicator__name">Факт</div>
+                  <div class="indicator__name">Отк</div>
+
+                  <!-- холдинг/квартал - start -->
+                  <div class="indicator__value yellow strong">7 031 957</div>
+                  <div class="indicator__value yellow strong">1 773 448</div>
+                  <div class="indicator__value yellow strong">963 449</div>
+                  <!-- холдинг/квартал - end -->
+
+                  <!-- озна-ис/квартал - start -->
+                  <div class="indicator__value">128 508</div>
+                  <div class="indicator__value">697 910</div>
+                  <div class="indicator__value">-30 598</div>
+                  <!-- озна-ис/квартал - end -->
+
+                  <!-- озна+/квартал - start -->
+                  <div class="indicator__value yellow">1 963 449</div>
+                  <div class="indicator__value yellow">6 152 724</div>
+                  <div class="indicator__value yellow">-4 810 725</div>
+                  <!-- озна+/квартал - end -->
+
+                  <!-- озна-инжиниринг/квартал - start -->
+                  <div class="indicator__value">304 128</div>
+                  <div class="indicator__value">304 128</div>
+                  <div class="indicator__value">-907 316</div>
+                  <!-- озна-инжиниринг/квартал - end -->
+
+                  <!-- ак озна/квартал - start -->
+                  <div class="indicator__value">272 553</div>
+                  <div class="indicator__value">272 553</div>
+                  <div class="indicator__value">272 553</div>
+                  <!-- ак озна/квартал - end -->
+                </div>
+                <!-- квартал - end -->
+
+                <!-- месяц - start -->
+                <div class="indicator__inner g-3-120">
+                  <div class="indicator__unit">Месяц</div>
+
+                  <div class="indicator__name">План</div>
+                  <div class="indicator__name">Факт</div>
+                  <div class="indicator__name">Отк</div>
+
+                  <!-- холдинг/месяц - start -->
+                  <div class="indicator__value yellow strong">1 456 632</div>
+                  <div class="indicator__value yellow strong red">291 564</div>
+                  <div class="indicator__value yellow strong">-1 165 068</div>
+                  <!-- холдинг/месяц - end -->
+
+                  <!-- озна-ис/месяц - start -->
+                  <div class="indicator__value">897 564</div>
+                  <div class="indicator__value green">-273 410</div>
+                  <div class="indicator__value">-624 154</div>
+                  <!-- озна-ис/месяц - end -->
+
+                  <!-- озна+/месяц - start -->
+                  <div class="indicator__value yellow">414 068</div>
+                  <div class="indicator__value yellow green">18 154</div>
+                  <div class="indicator__value yellow">-395 914</div>
+                  <!-- озна+/месяц - end -->
+
+                  <!-- озна-инжиниринг/месяц - start -->
+                  <div class="indicator__value">176 505</div>
+                  <div class="indicator__value red">15 017</div>
+                  <div class="indicator__value">-161 488</div>
+                  <!-- озна-инжиниринг/месяц - end -->
+
+                  <!-- ак озна/месяц - start -->
+                  <div class="indicator__value">387 563</div>
+                  <div class="indicator__value green">3 137</div>
+                  <div class="indicator__value">-384 426</div>
+                  <!-- ак озна/месяц - end -->
+                </div>
+                <!-- месяц - end -->
+
+              </article>
+              <!-- Входящий денежный поток - end -->
+
+              <!-- Запасы - start -->
+              <article class="indicator g-4-120">
+                <h3 class="indicator__title title">Запасы</h3>
+
+                <div class="indicator__name">Цель</div>
+                <div class="indicator__name">Факт</div>
+                <div class="indicator__name">Неликв</div>
+                <div class="indicator__name">Дни</div>
+
+                <!-- холдинг/год - start -->
+                <div class="indicator__value yellow strong">17 031 957</div>
+                <div class="indicator__value yellow strong green">11 773 448</div>
+                <div class="indicator__value yellow strong">10 963 449</div>
+                <div class="indicator__value yellow strong">10</div>
+                <!-- холдинг/год - end -->
+
+                <!-- озна-ис/год - start -->
+                <div class="indicator__value">6 128 508</div>
+                <div class="indicator__value green">5 697 910</div>
+                <div class="indicator__value">-430 598</div>
+                <div class="indicator__value">10</div>
+                <!-- озна-ис/год - end -->
+
+                <!-- озна+/год - start -->
+                <div class="indicator__value yellow">10 963 449</div>
+                <div class="indicator__value yellow red">6 152 724</div>
+                <div class="indicator__value yellow">-4 810 725</div>
+                <div class="indicator__value yellow">10</div>
+                <!-- озна+/год - end -->
+
+                <!-- озна-инжиниринг/год - start -->
+                <div class="indicator__value">7 304 128</div>
+                <div class="indicator__value red">7 304 128</div>
+                <div class="indicator__value">-2 907 316</div>
+                <div class="indicator__value">10</div>
+                <!-- озна-инжиниринг/год - end -->
+
+                <!-- ак озна/год - start -->
+                <div class="indicator__value">4 272 553</div>
+                <div class="indicator__value red">4 272 553</div>
+                <div class="indicator__value">4 272 553</div>
+                <div class="indicator__value">10</div>
+                <!-- ак озна/год - end -->
+
+              </article>
+              <!-- Запасы - end -->
+
+              <!-- Выручка - start -->
+              <article class="indicator g-2">
+                <h3 class="indicator__title title">Выручка</h3>
+
+                <!-- год - start -->
+                <div class="indicator__inner g-4-120">
+                  <div class="indicator__unit">Год</div>
+
+                  <div class="indicator__name">Цель</div>
+                  <div class="indicator__name">Прогноз</div>
+                  <div class="indicator__name">Факт</div>
+                  <div class="indicator__name">Отк</div>
+
+                  <!-- холдинг/год - start -->
+                  <div class="indicator__value yellow strong">17 031 957</div>
+                  <div class="indicator__value yellow strong red">11 773 448</div>
+                  <div class="indicator__value yellow strong">10 963 449</div>
+                  <div class="indicator__value yellow strong">10 963 449</div>
+                  <!-- холдинг/год - end -->
+
+                  <!-- озна-ис/год - start -->
+                  <div class="indicator__value">17 031 957</div>
+                  <div class="indicator__value green">11 773 448</div>
+                  <div class="indicator__value">10 963 449</div>
+                  <div class="indicator__value">10 963 449</div>
+                  <!-- озна-ис/год - end -->
+
+                  <!-- озна+/год - start -->
+                  <div class="indicator__value yellow">17 031 957</div>
+                  <div class="indicator__value yellow green">11 773 448</div>
+                  <div class="indicator__value yellow">10 963 449</div>
+                  <div class="indicator__value yellow">10 963 449</div>
+                  <!-- озна+/год - end -->
+
+                  <!-- озна-инжиниринг/год - start -->
+                  <div class="indicator__value">17 031 957</div>
+                  <div class="indicator__value green">11 773 448</div>
+                  <div class="indicator__value">10 963 449</div>
+                  <div class="indicator__value">10 963 449</div>
+                  <!-- озна-инжиниринг/год - end -->
+
+                  <!-- ак озна/год - start -->
+                  <div class="indicator__value">17 031 957</div>
+                  <div class="indicator__value green">11 773 448</div>
+                  <div class="indicator__value">10 963 449</div>
+                  <div class="indicator__value">10 963 449</div>
+                  <!-- ак озна/год - end -->
+                </div>
+                <!-- год - end -->
+
+                <!-- месяц - start -->
+                <div class="indicator__inner g-3-120">
+                  <div class="indicator__unit">Месяц</div>
+
+                  <div class="indicator__name">План</div>
+                  <div class="indicator__name">Факт</div>
+                  <div class="indicator__name">Отк</div>
+
+                  <!-- холдинг/месяц - start -->
+                  <div class="indicator__value yellow strong">1 456 632</div>
+                  <div class="indicator__value yellow strong green">291 564</div>
+                  <div class="indicator__value yellow strong">-1 165 068</div>
+                  <!-- холдинг/месяц - end -->
+
+                  <!-- озна-ис/месяц - start -->
+                  <div class="indicator__value">897 564</div>
+                  <div class="indicator__value green">-273 410</div>
+                  <div class="indicator__value">-624 154</div>
+                  <!-- озна-ис/месяц - end -->
+
+                  <!-- озна+/месяц - start -->
+                  <div class="indicator__value yellow">414 068</div>
+                  <div class="indicator__value yellow red">18 154</div>
+                  <div class="indicator__value yellow">-395 914</div>
+                  <!-- озна+/месяц - end -->
+
+                  <!-- озна-инжиниринг/месяц - start -->
+                  <div class="indicator__value">176 505</div>
+                  <div class="indicator__value red">15 017</div>
+                  <div class="indicator__value">-161 488</div>
+                  <!-- озна-инжиниринг/месяц - end -->
+
+                  <!-- ак озна/месяц - start -->
+                  <div class="indicator__value">387 563</div>
+                  <div class="indicator__value red">3 137</div>
+                  <div class="indicator__value">-384 426</div>
+                  <!-- ак озна/месяц - end -->
+                </div>
+                <!-- месяц - end -->
+
+              </article>
+              <!-- Выручка - end -->
+
+            </div><!--/.table__body-->
+
+          </div><!--/.table-->
+
+        </div>
+        <!-- Акардион 2 уровня - end -->
+
+        <!-- Акардион 2 уровня - start -->
+        <div class="accordion__head active sPl-106 sFw-400">
+          <span>Октябрь</span>
+        </div>
+
+        <div class="accordion__block">
+
+          <div class="table">
+
+            <div class="table__header">
+
+              <div class="indicator indicator--header">
+                <div class="indicator__unit">Цель</div>
+
+                <div class="indicator__value yellow strong">Холдинг</div>
+                <div class="indicator__value">ОЗНА-ИС</div>
+                <div class="indicator__value yellow">ОЗНА+</div>
+                <div class="indicator__value">ОЗНА-инжиниринг</div>
+                <div class="indicator__value">АК ОЗНА</div>
+              </div>
+
+            </div><!--/.table__header-->
+
+            <div class="table__body">
+
+              <!-- Входящий денежный поток - start -->
+              <article class="indicator g-3">
+                <h3 class="indicator__title title">Входящий денежный поток</h3>
+
+                <!-- год - start -->
+                <div class="indicator__inner g-3-120">
+                  <div class="indicator__unit">Год</div>
+
+                  <div class="indicator__name">Цель</div>
+                  <div class="indicator__name">Факт</div>
+                  <div class="indicator__name">Отк</div>
+
+                  <!-- холдинг/год - start -->
+                  <div class="indicator__value yellow strong">17 031 957</div>
+                  <div class="indicator__value yellow strong">11 773 448</div>
+                  <div class="indicator__value yellow strong">10 963 449</div>
+                  <!-- холдинг/год - end -->
+
+                  <!-- озна-ис/год - start -->
+                  <div class="indicator__value">6 128 508</div>
+                  <div class="indicator__value">5 697 910</div>
+                  <div class="indicator__value">-430 598</div>
+                  <!-- озна-ис/год - end -->
+
+                  <!-- озна+/год - start -->
+                  <div class="indicator__value yellow">10 963 449</div>
+                  <div class="indicator__value yellow">6 152 724</div>
+                  <div class="indicator__value yellow">-4 810 725</div>
+                  <!-- озна+/год - end -->
+
+                  <!-- озна-инжиниринг/год - start -->
+                  <div class="indicator__value">7 304 128</div>
+                  <div class="indicator__value">7 304 128</div>
+                  <div class="indicator__value">-2 907 316</div>
+                  <!-- озна-инжиниринг/год - end -->
+
+                  <!-- ак озна/год - start -->
+                  <div class="indicator__value">4 272 553</div>
+                  <div class="indicator__value">4 272 553</div>
+                  <div class="indicator__value">4 272 553</div>
+                  <!-- ак озна/год - end -->
+                </div>
+                <!-- год - end -->
+
+                <!-- квартал - start -->
+                <div class="indicator__inner g-3-120">
+                  <div class="indicator__unit">Квартал</div>
+
+                  <div class="indicator__name">План</div>
+                  <div class="indicator__name">Факт</div>
+                  <div class="indicator__name">Отк</div>
+
+                  <!-- холдинг/квартал - start -->
+                  <div class="indicator__value yellow strong">7 031 957</div>
+                  <div class="indicator__value yellow strong">1 773 448</div>
+                  <div class="indicator__value yellow strong">963 449</div>
+                  <!-- холдинг/квартал - end -->
+
+                  <!-- озна-ис/квартал - start -->
+                  <div class="indicator__value">128 508</div>
+                  <div class="indicator__value">697 910</div>
+                  <div class="indicator__value">-30 598</div>
+                  <!-- озна-ис/квартал - end -->
+
+                  <!-- озна+/квартал - start -->
+                  <div class="indicator__value yellow">1 963 449</div>
+                  <div class="indicator__value yellow">6 152 724</div>
+                  <div class="indicator__value yellow">-4 810 725</div>
+                  <!-- озна+/квартал - end -->
+
+                  <!-- озна-инжиниринг/квартал - start -->
+                  <div class="indicator__value">304 128</div>
+                  <div class="indicator__value">304 128</div>
+                  <div class="indicator__value">-907 316</div>
+                  <!-- озна-инжиниринг/квартал - end -->
+
+                  <!-- ак озна/квартал - start -->
+                  <div class="indicator__value">272 553</div>
+                  <div class="indicator__value">272 553</div>
+                  <div class="indicator__value">272 553</div>
+                  <!-- ак озна/квартал - end -->
+                </div>
+                <!-- квартал - end -->
+
+                <!-- месяц - start -->
+                <div class="indicator__inner g-3-120">
+                  <div class="indicator__unit">Месяц</div>
+
+                  <div class="indicator__name">План</div>
+                  <div class="indicator__name">Факт</div>
+                  <div class="indicator__name">Отк</div>
+
+                  <!-- холдинг/месяц - start -->
+                  <div class="indicator__value yellow strong">1 456 632</div>
+                  <div class="indicator__value yellow strong red">291 564</div>
+                  <div class="indicator__value yellow strong">-1 165 068</div>
+                  <!-- холдинг/месяц - end -->
+
+                  <!-- озна-ис/месяц - start -->
+                  <div class="indicator__value">897 564</div>
+                  <div class="indicator__value green">-273 410</div>
+                  <div class="indicator__value">-624 154</div>
+                  <!-- озна-ис/месяц - end -->
+
+                  <!-- озна+/месяц - start -->
+                  <div class="indicator__value yellow">414 068</div>
+                  <div class="indicator__value yellow green">18 154</div>
+                  <div class="indicator__value yellow">-395 914</div>
+                  <!-- озна+/месяц - end -->
+
+                  <!-- озна-инжиниринг/месяц - start -->
+                  <div class="indicator__value">176 505</div>
+                  <div class="indicator__value red">15 017</div>
+                  <div class="indicator__value">-161 488</div>
+                  <!-- озна-инжиниринг/месяц - end -->
+
+                  <!-- ак озна/месяц - start -->
+                  <div class="indicator__value">387 563</div>
+                  <div class="indicator__value green">3 137</div>
+                  <div class="indicator__value">-384 426</div>
+                  <!-- ак озна/месяц - end -->
+                </div>
+                <!-- месяц - end -->
+
+              </article>
+              <!-- Входящий денежный поток - end -->
+
+              <!-- Запасы - start -->
+              <article class="indicator g-4-120">
+                <h3 class="indicator__title title">Запасы</h3>
+
+                <div class="indicator__name">Цель</div>
+                <div class="indicator__name">Факт</div>
+                <div class="indicator__name">Неликв</div>
+                <div class="indicator__name">Дни</div>
+
+                <!-- холдинг/год - start -->
+                <div class="indicator__value yellow strong">17 031 957</div>
+                <div class="indicator__value yellow strong green">11 773 448</div>
+                <div class="indicator__value yellow strong">10 963 449</div>
+                <div class="indicator__value yellow strong">10</div>
+                <!-- холдинг/год - end -->
+
+                <!-- озна-ис/год - start -->
+                <div class="indicator__value">6 128 508</div>
+                <div class="indicator__value green">5 697 910</div>
+                <div class="indicator__value">-430 598</div>
+                <div class="indicator__value">10</div>
+                <!-- озна-ис/год - end -->
+
+                <!-- озна+/год - start -->
+                <div class="indicator__value yellow">10 963 449</div>
+                <div class="indicator__value yellow red">6 152 724</div>
+                <div class="indicator__value yellow">-4 810 725</div>
+                <div class="indicator__value yellow">10</div>
+                <!-- озна+/год - end -->
+
+                <!-- озна-инжиниринг/год - start -->
+                <div class="indicator__value">7 304 128</div>
+                <div class="indicator__value red">7 304 128</div>
+                <div class="indicator__value">-2 907 316</div>
+                <div class="indicator__value">10</div>
+                <!-- озна-инжиниринг/год - end -->
+
+                <!-- ак озна/год - start -->
+                <div class="indicator__value">4 272 553</div>
+                <div class="indicator__value red">4 272 553</div>
+                <div class="indicator__value">4 272 553</div>
+                <div class="indicator__value">10</div>
+                <!-- ак озна/год - end -->
+
+              </article>
+              <!-- Запасы - end -->
+
+              <!-- Выручка - start -->
+              <article class="indicator g-2">
+                <h3 class="indicator__title title">Выручка</h3>
+
+                <!-- год - start -->
+                <div class="indicator__inner g-4-120">
+                  <div class="indicator__unit">Год</div>
+
+                  <div class="indicator__name">Цель</div>
+                  <div class="indicator__name">Прогноз</div>
+                  <div class="indicator__name">Факт</div>
+                  <div class="indicator__name">Отк</div>
+
+                  <!-- холдинг/год - start -->
+                  <div class="indicator__value yellow strong">17 031 957</div>
+                  <div class="indicator__value yellow strong red">11 773 448</div>
+                  <div class="indicator__value yellow strong">10 963 449</div>
+                  <div class="indicator__value yellow strong">10 963 449</div>
+                  <!-- холдинг/год - end -->
+
+                  <!-- озна-ис/год - start -->
+                  <div class="indicator__value">17 031 957</div>
+                  <div class="indicator__value green">11 773 448</div>
+                  <div class="indicator__value">10 963 449</div>
+                  <div class="indicator__value">10 963 449</div>
+                  <!-- озна-ис/год - end -->
+
+                  <!-- озна+/год - start -->
+                  <div class="indicator__value yellow">17 031 957</div>
+                  <div class="indicator__value yellow green">11 773 448</div>
+                  <div class="indicator__value yellow">10 963 449</div>
+                  <div class="indicator__value yellow">10 963 449</div>
+                  <!-- озна+/год - end -->
+
+                  <!-- озна-инжиниринг/год - start -->
+                  <div class="indicator__value">17 031 957</div>
+                  <div class="indicator__value green">11 773 448</div>
+                  <div class="indicator__value">10 963 449</div>
+                  <div class="indicator__value">10 963 449</div>
+                  <!-- озна-инжиниринг/год - end -->
+
+                  <!-- ак озна/год - start -->
+                  <div class="indicator__value">17 031 957</div>
+                  <div class="indicator__value green">11 773 448</div>
+                  <div class="indicator__value">10 963 449</div>
+                  <div class="indicator__value">10 963 449</div>
+                  <!-- ак озна/год - end -->
+                </div>
+                <!-- год - end -->
+
+                <!-- месяц - start -->
+                <div class="indicator__inner g-3-120">
+                  <div class="indicator__unit">Месяц</div>
+
+                  <div class="indicator__name">План</div>
+                  <div class="indicator__name">Факт</div>
+                  <div class="indicator__name">Отк</div>
+
+                  <!-- холдинг/месяц - start -->
+                  <div class="indicator__value yellow strong">1 456 632</div>
+                  <div class="indicator__value yellow strong green">291 564</div>
+                  <div class="indicator__value yellow strong">-1 165 068</div>
+                  <!-- холдинг/месяц - end -->
+
+                  <!-- озна-ис/месяц - start -->
+                  <div class="indicator__value">897 564</div>
+                  <div class="indicator__value green">-273 410</div>
+                  <div class="indicator__value">-624 154</div>
+                  <!-- озна-ис/месяц - end -->
+
+                  <!-- озна+/месяц - start -->
+                  <div class="indicator__value yellow">414 068</div>
+                  <div class="indicator__value yellow red">18 154</div>
+                  <div class="indicator__value yellow">-395 914</div>
+                  <!-- озна+/месяц - end -->
+
+                  <!-- озна-инжиниринг/месяц - start -->
+                  <div class="indicator__value">176 505</div>
+                  <div class="indicator__value red">15 017</div>
+                  <div class="indicator__value">-161 488</div>
+                  <!-- озна-инжиниринг/месяц - end -->
+
+                  <!-- ак озна/месяц - start -->
+                  <div class="indicator__value">387 563</div>
+                  <div class="indicator__value red">3 137</div>
+                  <div class="indicator__value">-384 426</div>
+                  <!-- ак озна/месяц - end -->
+                </div>
+                <!-- месяц - end -->
+
+              </article>
+              <!-- Выручка - end -->
+
+            </div><!--/.table__body-->
+
+          </div><!--/.table-->
+
+        </div>
+        <!-- Акардион 2 уровня - end -->
+
+      </div>
+      <!-- Акардион 1 уровня - end -->
+
+
+      <!-- Акардион 1 уровня - start -->
+      <div class="accordion__head active">
+        <span>2022</span>
+      </div>
+
+      <div class="accordion__block">
+
+        <!-- Акардион 2 уровня - start -->
+        <div class="accordion__head active sPl-106 sFw-400">
+          <span>Март</span>
+        </div>
+
+        <div class="accordion__block">
+
+          <div class="table">
+
+            <div class="table__header">
+
+              <div class="indicator indicator--header">
+                <div class="indicator__unit">Цель</div>
+
+                <div class="indicator__value yellow strong">Холдинг</div>
+                <div class="indicator__value">ОЗНА-ИС</div>
+                <div class="indicator__value yellow">ОЗНА+</div>
+                <div class="indicator__value">ОЗНА-инжиниринг</div>
+                <div class="indicator__value">АК ОЗНА</div>
+              </div>
+
+            </div><!--/.table__header-->
+
+            <div class="table__body">
+
+              <!-- Входящий денежный поток - start -->
+              <article class="indicator g-3">
+                <h3 class="indicator__title title">Входящий денежный поток</h3>
+
+                <!-- год - start -->
+                <div class="indicator__inner g-3-120">
+                  <div class="indicator__unit">Год</div>
+
+                  <div class="indicator__name">Цель</div>
+                  <div class="indicator__name">Факт</div>
+                  <div class="indicator__name">Отк</div>
+
+                  <!-- холдинг/год - start -->
+                  <div class="indicator__value yellow strong">17 031 957</div>
+                  <div class="indicator__value yellow strong">11 773 448</div>
+                  <div class="indicator__value yellow strong">10 963 449</div>
+                  <!-- холдинг/год - end -->
+
+                  <!-- озна-ис/год - start -->
+                  <div class="indicator__value">6 128 508</div>
+                  <div class="indicator__value">5 697 910</div>
+                  <div class="indicator__value">-430 598</div>
+                  <!-- озна-ис/год - end -->
+
+                  <!-- озна+/год - start -->
+                  <div class="indicator__value yellow">10 963 449</div>
+                  <div class="indicator__value yellow">6 152 724</div>
+                  <div class="indicator__value yellow">-4 810 725</div>
+                  <!-- озна+/год - end -->
+
+                  <!-- озна-инжиниринг/год - start -->
+                  <div class="indicator__value">7 304 128</div>
+                  <div class="indicator__value">7 304 128</div>
+                  <div class="indicator__value">-2 907 316</div>
+                  <!-- озна-инжиниринг/год - end -->
+
+                  <!-- ак озна/год - start -->
+                  <div class="indicator__value">4 272 553</div>
+                  <div class="indicator__value">4 272 553</div>
+                  <div class="indicator__value">4 272 553</div>
+                  <!-- ак озна/год - end -->
+                </div>
+                <!-- год - end -->
+
+                <!-- квартал - start -->
+                <div class="indicator__inner g-3-120">
+                  <div class="indicator__unit">Квартал</div>
+
+                  <div class="indicator__name">План</div>
+                  <div class="indicator__name">Факт</div>
+                  <div class="indicator__name">Отк</div>
+
+                  <!-- холдинг/квартал - start -->
+                  <div class="indicator__value yellow strong">7 031 957</div>
+                  <div class="indicator__value yellow strong">1 773 448</div>
+                  <div class="indicator__value yellow strong">963 449</div>
+                  <!-- холдинг/квартал - end -->
+
+                  <!-- озна-ис/квартал - start -->
+                  <div class="indicator__value">128 508</div>
+                  <div class="indicator__value">697 910</div>
+                  <div class="indicator__value">-30 598</div>
+                  <!-- озна-ис/квартал - end -->
+
+                  <!-- озна+/квартал - start -->
+                  <div class="indicator__value yellow">1 963 449</div>
+                  <div class="indicator__value yellow">6 152 724</div>
+                  <div class="indicator__value yellow">-4 810 725</div>
+                  <!-- озна+/квартал - end -->
+
+                  <!-- озна-инжиниринг/квартал - start -->
+                  <div class="indicator__value">304 128</div>
+                  <div class="indicator__value">304 128</div>
+                  <div class="indicator__value">-907 316</div>
+                  <!-- озна-инжиниринг/квартал - end -->
+
+                  <!-- ак озна/квартал - start -->
+                  <div class="indicator__value">272 553</div>
+                  <div class="indicator__value">272 553</div>
+                  <div class="indicator__value">272 553</div>
+                  <!-- ак озна/квартал - end -->
+                </div>
+                <!-- квартал - end -->
+
+                <!-- месяц - start -->
+                <div class="indicator__inner g-3-120">
+                  <div class="indicator__unit">Месяц</div>
+
+                  <div class="indicator__name">План</div>
+                  <div class="indicator__name">Факт</div>
+                  <div class="indicator__name">Отк</div>
+
+                  <!-- холдинг/месяц - start -->
+                  <div class="indicator__value yellow strong">1 456 632</div>
+                  <div class="indicator__value yellow strong red">291 564</div>
+                  <div class="indicator__value yellow strong">-1 165 068</div>
+                  <!-- холдинг/месяц - end -->
+
+                  <!-- озна-ис/месяц - start -->
+                  <div class="indicator__value">897 564</div>
+                  <div class="indicator__value green">-273 410</div>
+                  <div class="indicator__value">-624 154</div>
+                  <!-- озна-ис/месяц - end -->
+
+                  <!-- озна+/месяц - start -->
+                  <div class="indicator__value yellow">414 068</div>
+                  <div class="indicator__value yellow green">18 154</div>
+                  <div class="indicator__value yellow">-395 914</div>
+                  <!-- озна+/месяц - end -->
+
+                  <!-- озна-инжиниринг/месяц - start -->
+                  <div class="indicator__value">176 505</div>
+                  <div class="indicator__value red">15 017</div>
+                  <div class="indicator__value">-161 488</div>
+                  <!-- озна-инжиниринг/месяц - end -->
+
+                  <!-- ак озна/месяц - start -->
+                  <div class="indicator__value">387 563</div>
+                  <div class="indicator__value green">3 137</div>
+                  <div class="indicator__value">-384 426</div>
+                  <!-- ак озна/месяц - end -->
+                </div>
+                <!-- месяц - end -->
+
+              </article>
+              <!-- Входящий денежный поток - end -->
+
+              <!-- Запасы - start -->
+              <article class="indicator g-4-120">
+                <h3 class="indicator__title title">Запасы</h3>
+
+                <div class="indicator__name">Цель</div>
+                <div class="indicator__name">Факт</div>
+                <div class="indicator__name">Неликв</div>
+                <div class="indicator__name">Дни</div>
+
+                <!-- холдинг/год - start -->
+                <div class="indicator__value yellow strong">17 031 957</div>
+                <div class="indicator__value yellow strong green">11 773 448</div>
+                <div class="indicator__value yellow strong">10 963 449</div>
+                <div class="indicator__value yellow strong">10</div>
+                <!-- холдинг/год - end -->
+
+                <!-- озна-ис/год - start -->
+                <div class="indicator__value">6 128 508</div>
+                <div class="indicator__value green">5 697 910</div>
+                <div class="indicator__value">-430 598</div>
+                <div class="indicator__value">10</div>
+                <!-- озна-ис/год - end -->
+
+                <!-- озна+/год - start -->
+                <div class="indicator__value yellow">10 963 449</div>
+                <div class="indicator__value yellow red">6 152 724</div>
+                <div class="indicator__value yellow">-4 810 725</div>
+                <div class="indicator__value yellow">10</div>
+                <!-- озна+/год - end -->
+
+                <!-- озна-инжиниринг/год - start -->
+                <div class="indicator__value">7 304 128</div>
+                <div class="indicator__value red">7 304 128</div>
+                <div class="indicator__value">-2 907 316</div>
+                <div class="indicator__value">10</div>
+                <!-- озна-инжиниринг/год - end -->
+
+                <!-- ак озна/год - start -->
+                <div class="indicator__value">4 272 553</div>
+                <div class="indicator__value red">4 272 553</div>
+                <div class="indicator__value">4 272 553</div>
+                <div class="indicator__value">10</div>
+                <!-- ак озна/год - end -->
+
+              </article>
+              <!-- Запасы - end -->
+
+              <!-- Выручка - start -->
+              <article class="indicator g-2">
+                <h3 class="indicator__title title">Выручка</h3>
+
+                <!-- год - start -->
+                <div class="indicator__inner g-4-120">
+                  <div class="indicator__unit">Год</div>
+
+                  <div class="indicator__name">Цель</div>
+                  <div class="indicator__name">Прогноз</div>
+                  <div class="indicator__name">Факт</div>
+                  <div class="indicator__name">Отк</div>
+
+                  <!-- холдинг/год - start -->
+                  <div class="indicator__value yellow strong">17 031 957</div>
+                  <div class="indicator__value yellow strong red">11 773 448</div>
+                  <div class="indicator__value yellow strong">10 963 449</div>
+                  <div class="indicator__value yellow strong">10 963 449</div>
+                  <!-- холдинг/год - end -->
+
+                  <!-- озна-ис/год - start -->
+                  <div class="indicator__value">17 031 957</div>
+                  <div class="indicator__value green">11 773 448</div>
+                  <div class="indicator__value">10 963 449</div>
+                  <div class="indicator__value">10 963 449</div>
+                  <!-- озна-ис/год - end -->
+
+                  <!-- озна+/год - start -->
+                  <div class="indicator__value yellow">17 031 957</div>
+                  <div class="indicator__value yellow green">11 773 448</div>
+                  <div class="indicator__value yellow">10 963 449</div>
+                  <div class="indicator__value yellow">10 963 449</div>
+                  <!-- озна+/год - end -->
+
+                  <!-- озна-инжиниринг/год - start -->
+                  <div class="indicator__value">17 031 957</div>
+                  <div class="indicator__value green">11 773 448</div>
+                  <div class="indicator__value">10 963 449</div>
+                  <div class="indicator__value">10 963 449</div>
+                  <!-- озна-инжиниринг/год - end -->
+
+                  <!-- ак озна/год - start -->
+                  <div class="indicator__value">17 031 957</div>
+                  <div class="indicator__value green">11 773 448</div>
+                  <div class="indicator__value">10 963 449</div>
+                  <div class="indicator__value">10 963 449</div>
+                  <!-- ак озна/год - end -->
+                </div>
+                <!-- год - end -->
+
+                <!-- месяц - start -->
+                <div class="indicator__inner g-3-120">
+                  <div class="indicator__unit">Месяц</div>
+
+                  <div class="indicator__name">План</div>
+                  <div class="indicator__name">Факт</div>
+                  <div class="indicator__name">Отк</div>
+
+                  <!-- холдинг/месяц - start -->
+                  <div class="indicator__value yellow strong">1 456 632</div>
+                  <div class="indicator__value yellow strong green">291 564</div>
+                  <div class="indicator__value yellow strong">-1 165 068</div>
+                  <!-- холдинг/месяц - end -->
+
+                  <!-- озна-ис/месяц - start -->
+                  <div class="indicator__value">897 564</div>
+                  <div class="indicator__value green">-273 410</div>
+                  <div class="indicator__value">-624 154</div>
+                  <!-- озна-ис/месяц - end -->
+
+                  <!-- озна+/месяц - start -->
+                  <div class="indicator__value yellow">414 068</div>
+                  <div class="indicator__value yellow red">18 154</div>
+                  <div class="indicator__value yellow">-395 914</div>
+                  <!-- озна+/месяц - end -->
+
+                  <!-- озна-инжиниринг/месяц - start -->
+                  <div class="indicator__value">176 505</div>
+                  <div class="indicator__value red">15 017</div>
+                  <div class="indicator__value">-161 488</div>
+                  <!-- озна-инжиниринг/месяц - end -->
+
+                  <!-- ак озна/месяц - start -->
+                  <div class="indicator__value">387 563</div>
+                  <div class="indicator__value red">3 137</div>
+                  <div class="indicator__value">-384 426</div>
+                  <!-- ак озна/месяц - end -->
+                </div>
+                <!-- месяц - end -->
+
+              </article>
+              <!-- Выручка - end -->
+
+            </div><!--/.table__body-->
+
+          </div><!--/.table-->
+
+        </div>
+        <!-- Акардион 2 уровня - end -->
+
+        <!-- Акардион 2 уровня - start -->
+        <div class="accordion__head active sPl-106 sFw-400">
+          <span>Октябрь</span>
+        </div>
+
+        <div class="accordion__block">
+
+          <div class="table">
+
+            <div class="table__header">
+
+              <div class="indicator indicator--header">
+                <div class="indicator__unit">Цель</div>
+
+                <div class="indicator__value yellow strong">Холдинг</div>
+                <div class="indicator__value">ОЗНА-ИС</div>
+                <div class="indicator__value yellow">ОЗНА+</div>
+                <div class="indicator__value">ОЗНА-инжиниринг</div>
+                <div class="indicator__value">АК ОЗНА</div>
+              </div>
+
+            </div><!--/.table__header-->
+
+            <div class="table__body">
+
+              <!-- Входящий денежный поток - start -->
+              <article class="indicator g-3">
+                <h3 class="indicator__title title">Входящий денежный поток</h3>
+
+                <!-- год - start -->
+                <div class="indicator__inner g-3-120">
+                  <div class="indicator__unit">Год</div>
+
+                  <div class="indicator__name">Цель</div>
+                  <div class="indicator__name">Факт</div>
+                  <div class="indicator__name">Отк</div>
+
+                  <!-- холдинг/год - start -->
+                  <div class="indicator__value yellow strong">17 031 957</div>
+                  <div class="indicator__value yellow strong">11 773 448</div>
+                  <div class="indicator__value yellow strong">10 963 449</div>
+                  <!-- холдинг/год - end -->
+
+                  <!-- озна-ис/год - start -->
+                  <div class="indicator__value">6 128 508</div>
+                  <div class="indicator__value">5 697 910</div>
+                  <div class="indicator__value">-430 598</div>
+                  <!-- озна-ис/год - end -->
+
+                  <!-- озна+/год - start -->
+                  <div class="indicator__value yellow">10 963 449</div>
+                  <div class="indicator__value yellow">6 152 724</div>
+                  <div class="indicator__value yellow">-4 810 725</div>
+                  <!-- озна+/год - end -->
+
+                  <!-- озна-инжиниринг/год - start -->
+                  <div class="indicator__value">7 304 128</div>
+                  <div class="indicator__value">7 304 128</div>
+                  <div class="indicator__value">-2 907 316</div>
+                  <!-- озна-инжиниринг/год - end -->
+
+                  <!-- ак озна/год - start -->
+                  <div class="indicator__value">4 272 553</div>
+                  <div class="indicator__value">4 272 553</div>
+                  <div class="indicator__value">4 272 553</div>
+                  <!-- ак озна/год - end -->
+                </div>
+                <!-- год - end -->
+
+                <!-- квартал - start -->
+                <div class="indicator__inner g-3-120">
+                  <div class="indicator__unit">Квартал</div>
+
+                  <div class="indicator__name">План</div>
+                  <div class="indicator__name">Факт</div>
+                  <div class="indicator__name">Отк</div>
+
+                  <!-- холдинг/квартал - start -->
+                  <div class="indicator__value yellow strong">7 031 957</div>
+                  <div class="indicator__value yellow strong">1 773 448</div>
+                  <div class="indicator__value yellow strong">963 449</div>
+                  <!-- холдинг/квартал - end -->
+
+                  <!-- озна-ис/квартал - start -->
+                  <div class="indicator__value">128 508</div>
+                  <div class="indicator__value">697 910</div>
+                  <div class="indicator__value">-30 598</div>
+                  <!-- озна-ис/квартал - end -->
+
+                  <!-- озна+/квартал - start -->
+                  <div class="indicator__value yellow">1 963 449</div>
+                  <div class="indicator__value yellow">6 152 724</div>
+                  <div class="indicator__value yellow">-4 810 725</div>
+                  <!-- озна+/квартал - end -->
+
+                  <!-- озна-инжиниринг/квартал - start -->
+                  <div class="indicator__value">304 128</div>
+                  <div class="indicator__value">304 128</div>
+                  <div class="indicator__value">-907 316</div>
+                  <!-- озна-инжиниринг/квартал - end -->
+
+                  <!-- ак озна/квартал - start -->
+                  <div class="indicator__value">272 553</div>
+                  <div class="indicator__value">272 553</div>
+                  <div class="indicator__value">272 553</div>
+                  <!-- ак озна/квартал - end -->
+                </div>
+                <!-- квартал - end -->
+
+                <!-- месяц - start -->
+                <div class="indicator__inner g-3-120">
+                  <div class="indicator__unit">Месяц</div>
+
+                  <div class="indicator__name">План</div>
+                  <div class="indicator__name">Факт</div>
+                  <div class="indicator__name">Отк</div>
+
+                  <!-- холдинг/месяц - start -->
+                  <div class="indicator__value yellow strong">1 456 632</div>
+                  <div class="indicator__value yellow strong red">291 564</div>
+                  <div class="indicator__value yellow strong">-1 165 068</div>
+                  <!-- холдинг/месяц - end -->
+
+                  <!-- озна-ис/месяц - start -->
+                  <div class="indicator__value">897 564</div>
+                  <div class="indicator__value green">-273 410</div>
+                  <div class="indicator__value">-624 154</div>
+                  <!-- озна-ис/месяц - end -->
+
+                  <!-- озна+/месяц - start -->
+                  <div class="indicator__value yellow">414 068</div>
+                  <div class="indicator__value yellow green">18 154</div>
+                  <div class="indicator__value yellow">-395 914</div>
+                  <!-- озна+/месяц - end -->
+
+                  <!-- озна-инжиниринг/месяц - start -->
+                  <div class="indicator__value">176 505</div>
+                  <div class="indicator__value red">15 017</div>
+                  <div class="indicator__value">-161 488</div>
+                  <!-- озна-инжиниринг/месяц - end -->
+
+                  <!-- ак озна/месяц - start -->
+                  <div class="indicator__value">387 563</div>
+                  <div class="indicator__value green">3 137</div>
+                  <div class="indicator__value">-384 426</div>
+                  <!-- ак озна/месяц - end -->
+                </div>
+                <!-- месяц - end -->
+
+              </article>
+              <!-- Входящий денежный поток - end -->
+
+              <!-- Запасы - start -->
+              <article class="indicator g-4-120">
+                <h3 class="indicator__title title">Запасы</h3>
+
+                <div class="indicator__name">Цель</div>
+                <div class="indicator__name">Факт</div>
+                <div class="indicator__name">Неликв</div>
+                <div class="indicator__name">Дни</div>
+
+                <!-- холдинг/год - start -->
+                <div class="indicator__value yellow strong">17 031 957</div>
+                <div class="indicator__value yellow strong green">11 773 448</div>
+                <div class="indicator__value yellow strong">10 963 449</div>
+                <div class="indicator__value yellow strong">10</div>
+                <!-- холдинг/год - end -->
+
+                <!-- озна-ис/год - start -->
+                <div class="indicator__value">6 128 508</div>
+                <div class="indicator__value green">5 697 910</div>
+                <div class="indicator__value">-430 598</div>
+                <div class="indicator__value">10</div>
+                <!-- озна-ис/год - end -->
+
+                <!-- озна+/год - start -->
+                <div class="indicator__value yellow">10 963 449</div>
+                <div class="indicator__value yellow red">6 152 724</div>
+                <div class="indicator__value yellow">-4 810 725</div>
+                <div class="indicator__value yellow">10</div>
+                <!-- озна+/год - end -->
+
+                <!-- озна-инжиниринг/год - start -->
+                <div class="indicator__value">7 304 128</div>
+                <div class="indicator__value red">7 304 128</div>
+                <div class="indicator__value">-2 907 316</div>
+                <div class="indicator__value">10</div>
+                <!-- озна-инжиниринг/год - end -->
+
+                <!-- ак озна/год - start -->
+                <div class="indicator__value">4 272 553</div>
+                <div class="indicator__value red">4 272 553</div>
+                <div class="indicator__value">4 272 553</div>
+                <div class="indicator__value">10</div>
+                <!-- ак озна/год - end -->
+
+              </article>
+              <!-- Запасы - end -->
+
+              <!-- Выручка - start -->
+              <article class="indicator g-2">
+                <h3 class="indicator__title title">Выручка</h3>
+
+                <!-- год - start -->
+                <div class="indicator__inner g-4-120">
+                  <div class="indicator__unit">Год</div>
+
+                  <div class="indicator__name">Цель</div>
+                  <div class="indicator__name">Прогноз</div>
+                  <div class="indicator__name">Факт</div>
+                  <div class="indicator__name">Отк</div>
+
+                  <!-- холдинг/год - start -->
+                  <div class="indicator__value yellow strong">17 031 957</div>
+                  <div class="indicator__value yellow strong red">11 773 448</div>
+                  <div class="indicator__value yellow strong">10 963 449</div>
+                  <div class="indicator__value yellow strong">10 963 449</div>
+                  <!-- холдинг/год - end -->
+
+                  <!-- озна-ис/год - start -->
+                  <div class="indicator__value">17 031 957</div>
+                  <div class="indicator__value green">11 773 448</div>
+                  <div class="indicator__value">10 963 449</div>
+                  <div class="indicator__value">10 963 449</div>
+                  <!-- озна-ис/год - end -->
+
+                  <!-- озна+/год - start -->
+                  <div class="indicator__value yellow">17 031 957</div>
+                  <div class="indicator__value yellow green">11 773 448</div>
+                  <div class="indicator__value yellow">10 963 449</div>
+                  <div class="indicator__value yellow">10 963 449</div>
+                  <!-- озна+/год - end -->
+
+                  <!-- озна-инжиниринг/год - start -->
+                  <div class="indicator__value">17 031 957</div>
+                  <div class="indicator__value green">11 773 448</div>
+                  <div class="indicator__value">10 963 449</div>
+                  <div class="indicator__value">10 963 449</div>
+                  <!-- озна-инжиниринг/год - end -->
+
+                  <!-- ак озна/год - start -->
+                  <div class="indicator__value">17 031 957</div>
+                  <div class="indicator__value green">11 773 448</div>
+                  <div class="indicator__value">10 963 449</div>
+                  <div class="indicator__value">10 963 449</div>
+                  <!-- ак озна/год - end -->
+                </div>
+                <!-- год - end -->
+
+                <!-- месяц - start -->
+                <div class="indicator__inner g-3-120">
+                  <div class="indicator__unit">Месяц</div>
+
+                  <div class="indicator__name">План</div>
+                  <div class="indicator__name">Факт</div>
+                  <div class="indicator__name">Отк</div>
+
+                  <!-- холдинг/месяц - start -->
+                  <div class="indicator__value yellow strong">1 456 632</div>
+                  <div class="indicator__value yellow strong green">291 564</div>
+                  <div class="indicator__value yellow strong">-1 165 068</div>
+                  <!-- холдинг/месяц - end -->
+
+                  <!-- озна-ис/месяц - start -->
+                  <div class="indicator__value">897 564</div>
+                  <div class="indicator__value green">-273 410</div>
+                  <div class="indicator__value">-624 154</div>
+                  <!-- озна-ис/месяц - end -->
+
+                  <!-- озна+/месяц - start -->
+                  <div class="indicator__value yellow">414 068</div>
+                  <div class="indicator__value yellow red">18 154</div>
+                  <div class="indicator__value yellow">-395 914</div>
+                  <!-- озна+/месяц - end -->
+
+                  <!-- озна-инжиниринг/месяц - start -->
+                  <div class="indicator__value">176 505</div>
+                  <div class="indicator__value red">15 017</div>
+                  <div class="indicator__value">-161 488</div>
+                  <!-- озна-инжиниринг/месяц - end -->
+
+                  <!-- ак озна/месяц - start -->
+                  <div class="indicator__value">387 563</div>
+                  <div class="indicator__value red">3 137</div>
+                  <div class="indicator__value">-384 426</div>
+                  <!-- ак озна/месяц - end -->
+                </div>
+                <!-- месяц - end -->
+
+              </article>
+              <!-- Выручка - end -->
+
+            </div><!--/.table__body-->
+
+          </div><!--/.table-->
+
+        </div>
+        <!-- Акардион 2 уровня - end -->
+
+      </div>
+      <!-- Акардион 1 уровня - end -->
+
+    </div><!--./accordion-->
+
+    <button type="button" class="sModal__close" data-sumbiot-modal-close title="Закрыть окно"></button>
+
+  </div><!--./modal__inner-->
 
 </section><!--./modal-->

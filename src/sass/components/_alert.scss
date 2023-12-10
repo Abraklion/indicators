@@ -1,7 +1,18 @@
+@use "../variables" as v;
 
 .alert {
+  user-select: none;
+
+  max-width: 425px;
+
+  padding: 13px;
+  margin: 0 0 32px 0;
+
+  border-radius: 2px;
 
   &--info {
+    background-color: #CFF4FC;
 
+    color: #087990;
   }
 }

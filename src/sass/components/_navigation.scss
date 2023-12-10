@@ -1,16 +1,23 @@
+@use "../variables" as v;
 
 .navigation {
-
+  display: flex;
+  align-items: flex-start;
 }
 
 .navigation__logout {
-
+  width: 100px;
+  height: 75px;
 }
 
 .navigation__menu {
-
+  position: absolute;
+  top: 20px;
+  right: 146px;
 }
 
 .navigation__options {
-
+  position: absolute;
+  top: 0;
+  right: 12px;
 }

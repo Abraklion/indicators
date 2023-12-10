@@ -93,6 +93,10 @@
     @include m.rulesBreakpoint($container,(
       padding-left: 32px
     ),'32', $orientation);
+
+    @include m.rulesBreakpoint($container,(
+      padding-left: 106px
+    ),'106', $orientation);
   }
 
   // 5 Право

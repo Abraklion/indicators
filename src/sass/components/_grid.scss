@@ -1,4 +1,28 @@
-@use "../variables" as v;
-@use "../library/sumbiot/general/mixins/components/grid" as mG;
 
-@include mG.grid(v.$container,v.$orientation);
+.g {
+
+  &-1{
+    grid-template-columns:1fr;
+  }
+
+  &-2{
+    grid-template-columns: repeat(2, auto);
+  }
+
+  &-3{
+    grid-template-columns: repeat(3, auto);
+  }
+
+  &-2-120{
+    grid-template-columns: repeat(2, minmax(120px,auto));
+  }
+
+  &-3-120{
+    grid-template-columns: repeat(3, minmax(120px,auto));
+  }
+
+  &-4-120{
+    grid-template-columns: repeat(4, minmax(120px,auto));
+  }
+
+}

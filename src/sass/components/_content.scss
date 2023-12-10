@@ -1,3 +1,4 @@
+@use "../variables" as v;
 
 .content {
 
@@ -8,13 +9,20 @@
 }
 
 .content__title {
-
+  margin: 0 0 32px 0;
 }
 
 .content__box {
-
+  margin: 0 0 32px 0;
 }
 
 .content__subtitle {
+  padding: 0 0 0 24px;
+  margin: 0 0 24px 0;
 
+  font-size: 20px;
+
+  color: v.$black;
+
+  text-shadow: none;
 }

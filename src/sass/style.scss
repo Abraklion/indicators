@@ -4,7 +4,7 @@
 
 // Изменить параметры по умолчанию
 @use 'library/sumbiot/general/variables' with (
-  $font-family-basic: #{"Oswaid", sans-serif},
+  $font-family-basic: #{"Oswald", sans-serif},
 
   $container: (
     hd: (breakpoint: 1921px, max-width: 1920px)
@@ -21,14 +21,21 @@
 @use "components/logo";
 @use "components/logout";
 @use "components/burger";
-@use "components/navigation";
 @use "components/menu";
 @use "components/options";
 @use "components/title";
 @use "components/alert";
+@use "components/navigation";
+@use "components/btn";
+@use "components/grid";
+@use "components/form";
+@use "components/button";
+@use "components/accordion";
+
 
 @use "components/page";
 @use "components/header";
+@use "components/modal";
 @use "components/navigation-index";
 @use "components/inner";
 @use "components/select";

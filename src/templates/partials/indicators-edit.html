@@ -1,15 +1,17 @@
 <div class="content">
   <div class="sContainer-fluid">
 
-    <form class="content__inner sForm">
+    <form class="content__inner sForm sForm--edit">
 
       <div class="content__title title">Редактирование показателей</div>
 
-      <p class="alert alert-info">Значения указываются <b>в рублях</b>!</p>
+      <p class="alert alert--info">Значения указываются <b>в рублях</b>!</p>
 
       <section class="content__box">
 
-        <h2 class="content__subtitle title">Значения по месяцам</h2>
+        <h2 class="content__subtitle title title--line">
+          <span>Значения по месяцам</span>
+        </h2>
 
         <div class="sForm__wrapper">
 
@@ -17,17 +19,17 @@
 
             <label class="sForm__item">
               <span class="sForm__period">1 месяц</span>
-              <input class="sForm__checkbox" type="text" name="m1">
+              <input class="sForm__input" type="text" name="m1" autocomplete="off">
             </label><!--/.sForm__item-->
 
             <label class="sForm__item">
               <span class="sForm__period">2 месяц</span>
-              <input class="sForm__checkbox" type="text" name="m2">
+              <input class="sForm__input" type="text" name="m2" autocomplete="off">
             </label><!--/.sForm__item-->
 
             <label class="sForm__item">
               <span class="sForm__period">3 месяц</span>
-              <input class="sForm__checkbox" type="text" name="m3">
+              <input class="sForm__input" type="text" name="m3" autocomplete="off">
             </label><!--/.sForm__item-->
 
           </div><!--/.sForm__inner-->
@@ -36,17 +38,17 @@
 
             <label class="sForm__item">
               <span class="sForm__period">4 месяц</span>
-              <input class="sForm__checkbox" type="text" name="m4">
+              <input class="sForm__input" type="text" name="m4" autocomplete="off">
             </label><!--/.sForm__item-->
 
             <label class="sForm__item">
               <span class="sForm__period">5 месяц</span>
-              <input class="sForm__checkbox" type="text" name="m5">
+              <input class="sForm__input" type="text" name="m5" autocomplete="off">
             </label><!--/.sForm__item-->
 
             <label class="sForm__item">
               <span class="sForm__period">6 месяц</span>
-              <input class="sForm__checkbox" type="text" name="m6">
+              <input class="sForm__input" type="text" name="m6" autocomplete="off">
             </label><!--/.sForm__item-->
 
           </div><!--/.sForm__inner-->
@@ -55,17 +57,17 @@
 
             <label class="sForm__item">
               <span class="sForm__period">7 месяц</span>
-              <input class="sForm__checkbox" type="text" name="m7">
+              <input class="sForm__input" type="text" name="m7" autocomplete="off">
             </label><!--/.sForm__item-->
 
             <label class="sForm__item">
               <span class="sForm__period">8 месяц</span>
-              <input class="sForm__checkbox" type="text" name="m8">
+              <input class="sForm__input" type="text" name="m8" autocomplete="off">
             </label><!--/.sForm__item-->
 
             <label class="sForm__item">
               <span class="sForm__period">9 месяц</span>
-              <input class="sForm__checkbox" type="text" name="m9">
+              <input class="sForm__input" type="text" name="m9" autocomplete="off">
             </label><!--/.sForm__item-->
 
           </div><!--/.sForm__inner-->
@@ -74,17 +76,17 @@
 
             <label class="sForm__item">
               <span class="sForm__period">10 месяц</span>
-              <input class="sForm__checkbox" type="text" name="m10">
+              <input class="sForm__input" type="text" name="m10" autocomplete="off">
             </label><!--/.sForm__item-->
 
             <label class="sForm__item">
               <span class="sForm__period">11 месяц</span>
-              <input class="sForm__checkbox" type="text" name="m11">
+              <input class="sForm__input" type="text" name="m11" autocomplete="off">
             </label><!--/.sForm__item-->
 
             <label class="sForm__item">
               <span class="sForm__period">12 месяц</span>
-              <input class="sForm__checkbox" type="text" name="m12">
+              <input class="sForm__input" type="text" name="m12" autocomplete="off">
             </label><!--/.sForm__item-->
 
           </div><!--/.sForm__inner-->
@@ -95,15 +97,26 @@
 
       <section class="content__box">
 
-        <h2 class="content__subtitle title">Значения по кварталам</h2>
+        <h2 class="content__subtitle title title--line">
+          <span>Значения по кварталам</span>
+        </h2>
 
         <div class="sForm__wrapper">
 
           <div class="sForm__inner">
 
             <label class="sForm__item">
-              <span class="sForm__period">1 квартал</span>
-              <input class="sForm__checkbox" type="text" name="q1">
+              <span class="sForm__period green">1 квартал</span>
+              <input class="sForm__input" type="text" name="q1" autocomplete="off">
+            </label><!--/.sForm__item-->
+
+          </div><!--/.sForm__inner-->
+
+          <div class="sForm__inner">
+
+            <label class="sForm__item green">
+              <span class="sForm__period green">2 квартал</span>
+              <input class="sForm__input" type="text" name="q2" autocomplete="off">
             </label><!--/.sForm__item-->
 
           </div><!--/.sForm__inner-->
@@ -111,8 +124,8 @@
           <div class="sForm__inner">
 
             <label class="sForm__item">
-              <span class="sForm__period">2 квартал</span>
-              <input class="sForm__checkbox" type="text" name="q2">
+              <span class="sForm__period green">3 квартал</span>
+              <input class="sForm__input" type="text" name="q3" autocomplete="off">
             </label><!--/.sForm__item-->
 
           </div><!--/.sForm__inner-->
@@ -120,17 +133,8 @@
           <div class="sForm__inner">
 
             <label class="sForm__item">
-              <span class="sForm__period">3 квартал</span>
-              <input class="sForm__checkbox" type="text" name="q3">
-            </label><!--/.sForm__item-->
-
-          </div><!--/.sForm__inner-->
-
-          <div class="sForm__inner">
-
-            <label class="sForm__item">
-              <span class="sForm__period">4 квартал</span>
-              <input class="sForm__checkbox" type="text" name="q4">
+              <span class="sForm__period green">4 квартал</span>
+              <input class="sForm__input" type="text" name="q4" autocomplete="off">
             </label><!--/.sForm__item-->
 
           </div><!--/.sForm__inner-->
@@ -139,7 +143,7 @@
 
       </section><!--/.content__box-->
 
-      <button class="sForm__button sBtn" type="submit">Сохранить</button>
+      <button class="sForm__button sBtn sBtn-primary" type="submit">Сохранить</button>
 
     </form><!--/.content__inner-->
 

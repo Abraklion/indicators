@@ -1,12 +1,46 @@
+@use "../variables" as v;
+@use "../library/sumbiot/general/mixins" as m;
 
 .select {
+  user-select: v.$select;
 
+  margin: 40px 0 32px 0;
+  padding: 0 133px 0 0;
 }
 
 .select__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 48px;
 
+  @include m.media('hd') {
+    grid-template-columns: 850px 850px;
+  }
 }
 
 .select__col {
+  min-height: 252px;
 
+  background-position: 0 0;
+  background-repeat: repeat;
+
+  box-shadow: inset -2px -2px 4px 0px rgba(0, 0, 0, 0.10),
+              inset 2px 2px 4px 0px rgba(0, 0, 0, 0.10);
+
+  &:nth-child(1) {
+    margin: 0 0 0 -12px;
+    padding: 24px 30px 30px 30px;
+
+    background-color: #7f9ada;
+    background-image: url('../img/bg-blue.jpg');
+  }
+
+  &:nth-child(2) {
+    padding: 35px 30px 30px 30px;
+
+    background-color: #f3f3f3;
+    background-image: url('../img/bg-white.jpg');
+
+    border-radius: 0 8px 8px 0;
+  }
 }

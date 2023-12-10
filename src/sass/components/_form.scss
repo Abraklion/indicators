@@ -1,6 +1,219 @@
+@use "../variables" as v;
+
+.sForm {
+
+  &--edit {
+
+    .sForm__inner {
+      grid-column-gap: 5px;
+    }
+
+    .sForm__item {
+      display: flex;
+      align-items: center;
+
+      padding: 2px 12px 2px 2px;
+
+      border: 1px solid #000000;
+      border-radius: 2px;
+    }
+
+    .sForm__input {
+      flex: 1 0 0%;
+      width: 100%;
+
+      padding: 0;
+
+      border: 0;
+
+      font-weight: 500;
+      font-style: normal;
+      font-size: 18px;
+      font-family: Oswald, sans-serif;
+      line-height: 18px;
+
+      text-transform: uppercase;
+
+      color: #0D1753;
+
+      &:focus {
+        box-shadow: none;
+      }
+    }
+
+    .sForm__button {
+      min-width: 225px;
+
+      margin-top: 10px;
+      padding: 15px;
+    }
+
+  }
+
+  &--option {
+
+    .sForm__inner {
+      grid-column-gap: 12px;
+      grid-row-gap: 12px;
+
+      margin-bottom: 24px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .sForm__item {
+      line-height: 18px;
+    }
+  }
+}
+
+.sForm__linear {
+  display: grid;
+  grid-row-gap: 12px;
+  grid-column-gap: 16px;
+  justify-content: start;
+
+  &--v1 {
+    grid-template-columns: repeat(7,auto);
+  }
+
+  &--v2 {
+    grid-template-columns: repeat(6,auto);
+    grid-row-gap: 16px;
+  }
+
+  &--v3 {
+    grid-template-columns: repeat(2,auto);
+    grid-row-gap: 14px;
+    grid-column-gap: 24px;
+  }
+}
 
 .sForm__wrapper {
+  display: grid;
+  grid-template-columns: repeat(4,auto);
+  grid-column-gap: 32px;
+}
 
+.sForm__label {
+  .sForm__item--checkbox & {
+    justify-content: flex-start;
+
+    position: relative;
+
+    font-weight: 400;
+    font-size: 12px;
+    font-family: "Оpen-Sans", sans-serif;
+
+    line-height: 16px;
+
+    color: #111429;
+
+    text-transform: uppercase;
+
+    vertical-align: middle;
+
+    &::before {
+      content: '';
+
+      width: 16px;
+      height: 16px;
+
+      margin: 0 12px 0 0;
+
+      border-radius: 2px;
+      border: 1px solid v.$black;
+
+      cursor: pointer;
+
+      box-shadow: none;
+
+      transition: box-shadow 0.15s ease;
+    }
+
+    &::after {
+      content: none;
+
+      width: 9px;
+      height: 5px;
+
+      position: absolute;
+      top: 5px;
+      left: 4px;
+
+      border-left: 2px solid #303030;
+      border-bottom: 2px solid #303030;
+
+      border-radius: 2px;
+
+      transform: rotate(-45deg);
+
+      pointer-events: none;
+    }
+
+    &:hover {
+      &::before {
+        box-shadow: inset 0 0 2px 0 rgba(v.$black,0.6);
+      }
+    }
+
+    &:active {
+      &::before {
+        box-shadow: inset 0 0 2px 0 rgba(v.$black,0.2);
+      }
+    }
+  }
+
+  &--ml {
+    .sForm__item--checkbox & {
+      &::before {
+        margin: 0 8px 0 0;
+      }
+    }
+  }
+
+  &--fz {
+    .sForm__item--checkbox & {
+      font-weight: 400;
+      font-size: 13px;
+      font-family: "Oswald", sans-serif;
+    }
+  }
+}
+
+.sForm__checkbox{
+
+  .sForm__item--checkbox & {
+
+    &:checked + .sForm__label{
+
+      &::after{
+        content: '';
+      }
+
+    }
+
+  }
+}
+
+.sForm__title {
+  padding-left: 24px;
+  margin: 0 0 16px 0;
+
+  font-weight: 500;
+  font-size: 15px;
+
+  line-height: 16px;
+
+  color: #000;
+
+  text-shadow: none;
+
+  span {
+    background-color: #fffdfa;
+  }
 }
 
 .sForm__select {
@@ -12,5 +225,55 @@
 }
 
 .sForm__period {
+  user-select: v.$select;
 
+  padding: 12px;
+  margin: 0 12px 0 0;
+
+  background-color: #FCD17D;
+  background-image: url('../img/bg-yellow.jpg');
+  background-position: 0 0;
+  background-repeat: repeat;
+
+  font-size: 14px;
+  line-height: 14px;
+
+  border-radius: 2px;
+  border: 1px solid rgba(0, 0, 0, 0.10);
+  box-shadow: 2px 0 1px 0 rgba(0, 0, 0, 0.10);
+
+  &.green {
+    padding: 12px 8px;
+
+    background-color: #B6F6B0;
+    background-image: url('../img/bg-green.jpg');
+  }
+}
+
+.sForm__button {
+  margin-top: 24px;
+  padding: 8px 16px;
+}
+
+.sForm__link {
+  padding: 0 0 0 28px;
+
+  background-image: url("../img/rocket-icon.svg");
+  background-position: left center;
+  background-repeat: no-repeat;
+
+  font-size: 12px;
+  font-family: "Оpen-Sans", sans-serif;
+  font-weight: 400;
+
+  line-height: 16px;
+
+  text-transform: uppercase;
+  text-decoration: none;
+
+  color: #111429;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }

@@ -27,6 +27,12 @@
 
   .#{$prefix}G-justify-content{
     @include m.rulesBreakpoint($container,(
+      justify-content: right
+    ),'right', $orientation);
+  }
+
+  .#{$prefix}G-justify-content{
+    @include m.rulesBreakpoint($container,(
       justify-content: space-between
     ),'space-between', $orientation);
   }

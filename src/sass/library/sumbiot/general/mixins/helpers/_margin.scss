@@ -195,6 +195,10 @@
     ),'10', $orientation);
 
     @include m.rulesBreakpoint($container,(
+      margin-bottom: 20px
+    ),'20', $orientation);
+
+    @include m.rulesBreakpoint($container,(
       margin-bottom: 24px
     ),'24', $orientation);
 
