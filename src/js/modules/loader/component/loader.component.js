@@ -10,12 +10,12 @@ export default class LoaderComponent {
    * @param {string} [message.loadingText] - при загрузки
    * @param {string} [message.successText] - при успехе
    * @param {string} [message.failureText] - при ошибки
+   * @param {Object=} options - объект с настройками
+   * @param {string} [options.activeClass] - класс модификатор
    * @param {Object=} scr - путь к изображению для подгрузки
    * @param {string} [scr.loadingSrc] - при загрузки
    * @param {string} [scr.successSrc] - при успехе
    * @param {string} [scr.failureSrc] - при ошибки
-   * @param {Object=} options - объект с настройками
-   * @param {string} [options.activeClass] - класс модификатор
    */
   constructor({
                 loadingText = 'Загрузка',
@@ -23,12 +23,12 @@ export default class LoaderComponent {
                 failureText = 'Неудача',
               } = {},
               {
+                activeClass = '',
+              } = {},
+              {
                 loadingSrc = '/assets/img/loader.svg',
                 successSrc = '/assets/img/loader-ok.gif',
                 failureSrc = '/assets/img/loader-error.gif',
-              } = {},
-              {
-                activeClass = '',
               } = {}) {
 
     this.message = {
@@ -84,23 +84,25 @@ export default class LoaderComponent {
   /**
    * Успех
    * @param {Object} options - надстройка
-   * @return {void}
+   * @return {Element}
    */
   success(options = {}) {
 
     this._configurations(this.message.success.title, this.message.success.src, options)
 
+    return this.$el
   }
 
   /**
    * Неудача
    * @param {Object} options - надстройка
-   * @return {void}
+   * @return {Element}
    */
   failure(options = {}) {
 
     this._configurations(this.message.failure.title, this.message.failure.src, options)
 
+    return this.$el
   }
 
   /**

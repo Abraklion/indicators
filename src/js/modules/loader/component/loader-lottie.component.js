@@ -11,13 +11,13 @@ export default class LoaderLottieComponent extends LoaderComponent{
    * @param {string} [message.loadingText] - при загрузки
    * @param {string} [message.successText] - при успехе
    * @param {string} [message.failureText] - при ошибки
+   * @param {Object=} options - объект с настройками
+   * @param {string} [options.activeClass] - класс модификатор
+   * @param {number} [options.speed] - скорость анимации (по умолчинаю 1)
    * @param {Object=} scr - путь к изображению для подгрузки
    * @param {string} [scr.loadingSrc] - при загрузки
    * @param {string} [scr.successSrc] - при успехе
    * @param {string} [scr.failureSrc] - при ошибки
-   * @param {Object=} options - объект с настройками
-   * @param {string} [options.activeClass] - класс модификатор
-   * @param {number} [options.speed] - скорость анимации (по умолчинаю 1)
    */
   constructor({
                 loadingText = 'Загрузка',
@@ -25,19 +25,19 @@ export default class LoaderLottieComponent extends LoaderComponent{
                 failureText = 'Неудача',
               } = {},
               {
-                loadingSrc = '/assets/img/lottie/loader1.json',
-                successSrc = '/assets/img/lottie/success1.json',
-                failureSrc = '/assets/img/lottie/error1.json',
-              } = {},
-              {
                 activeClass = '',
                 speed = 1,
+              } = {},
+              {
+                loadingSrc = '/assets/img/lottie/loader.json',
+                successSrc = '/assets/img/lottie/success.json',
+                failureSrc = '/assets/img/lottie/error.json',
               } = {}) {
 
     super(
       {loadingText,successText,failureText},
-      {loadingSrc,successSrc,failureSrc},
-      {activeClass}
+      {activeClass},
+      {loadingSrc,successSrc,failureSrc}
     )
 
     this.speed = speed

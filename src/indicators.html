@@ -5,7 +5,7 @@ title: Показатели
 description: Описание
 
 link: style.min.css
-script: ['runtime.js','main.js']
+script: ['runtime.js','select2.js','main.js','indicators.js']
 
 lottiePlayer: false
 ---
@@ -18,7 +18,20 @@ lottiePlayer: false
 
   {{> select}}
 
-  {{> indicators}}
+  <div class="content">
+    <div class="sContainer-fluid">
+
+      <div class="content__inner">
+        <div class="content__title title">Показатели дву</div>
+
+        <div id="indicators">
+
+        </div>
+
+      </div><!--/.content__inner-->
+
+    </div><!--/.sContainer-fluid-->
+  </div><!--/.indicators-->
 
 </main>
 

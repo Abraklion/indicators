@@ -19,6 +19,8 @@
 }
 
 .select__col {
+  position: relative;
+
   min-height: 252px;
 
   background-position: 0 0;
@@ -42,5 +44,9 @@
     background-image: url('../img/bg-white.jpg');
 
     border-radius: 0 8px 8px 0;
+  }
+
+  &--pt {
+    padding-top: 24px!important;
   }
 }

@@ -1,8 +1,12 @@
 @use "sass:color";
 
+@use "../variables" as v;
+
 $color: #f5f5f5;
 
 .loader{
+  user-select: none;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -14,7 +18,7 @@ $color: #f5f5f5;
   left: 0;
   right: 0;
 
-  background-color: rgba($color,0.9);
+  background-color: rgba($color,0.7);
 
   text-align: center;
 
@@ -43,13 +47,32 @@ $color: #f5f5f5;
       text-transform: none;
     }
   }
+
+  &--fixed {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+
+    width: 300px;
+    height: 200px;
+
+    backdrop-filter: blur(1px);
+
+    border: 1px solid rgba(v.$black,0.5);
+
+    transform: translate(-50%,-50%);
+
+    border-radius: 4px;
+  }
 }
 
 .loader__img{
   display: block;
 
-  width: 34px;
-  height: auto;
+  width: 40px;
+  height: 40px;
 
   background-color: transparent;
 

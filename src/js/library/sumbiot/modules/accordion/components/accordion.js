@@ -1,7 +1,7 @@
 import AccordionCore from "../";
 
 /**
- *  Аккардион стандарт
+ *  Аккордеон стандарт
  * */
 
 export default class Accordion extends AccordionCore {
@@ -72,7 +72,7 @@ export default class Accordion extends AccordionCore {
         }
       }
 
-    })
+    }, true)
   }
 
   /**

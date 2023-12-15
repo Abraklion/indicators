@@ -38,4 +38,6 @@
 
 .logo__img {
   display: block;
+
+  filter: drop-shadow(0 2px 2px rgba(v.$black,0.05));
 }

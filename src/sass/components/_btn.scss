@@ -57,9 +57,17 @@
       box-shadow: inset 0 0 2px 3px color.scale(rgba(v.$black, 0.10), $lightness: -8%);
     }
   }
+
+  &.sActive {
+    background-color: color.scale(v.$white, $lightness: -2%);
+
+    box-shadow: inset 0 0 4px 2px rgba(77, 131, 211,0.20);
+  }
 }
 
 .btn__svg {
+  pointer-events: none;
+
   display: block;
 
   fill: #303030;

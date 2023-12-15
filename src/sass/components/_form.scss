@@ -76,7 +76,7 @@
   justify-content: start;
 
   &--v1 {
-    grid-template-columns: repeat(7,auto);
+    grid-template-columns: repeat(8,auto);
   }
 
   &--v2 {
@@ -98,7 +98,20 @@
 }
 
 .sForm__label {
+  margin-bottom: 8px;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  line-height: normal;
+
+  color: #0D1753;
+
+  //text-shadow: 0 0 4px rgba(255, 255, 255, 0.25);
+
   .sForm__item--checkbox & {
+    margin-bottom: 0;
+
     justify-content: flex-start;
 
     position: relative;

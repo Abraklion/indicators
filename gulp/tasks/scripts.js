@@ -16,6 +16,18 @@ module.exports = function () {
             import: './src/js/main.ts'
           },
 
+          // показатели дву
+          indicators: {
+            import: './src/js/indicators.ts',
+            dependOn: ['select2']
+          },
+
+          // показатели дву
+          editIndicators: {
+            import: './src/js/edit-indicators.ts',
+            dependOn: ['select2']
+          },
+
           // выпадающий список
           'select2' : 'select2',
         },
@@ -27,7 +39,7 @@ module.exports = function () {
 
         /** берет зависимость из среды пользователя **/
         externals: {
-          // jquery: 'jQuery',
+          jquery: 'jQuery',
         },
 
         /** оптимизация **/

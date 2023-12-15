@@ -1,6 +1,12 @@
 @use "../variables" as v;
 
+#indicators {
+  min-height: 500px;
+}
+
 .indicator {
+  user-select: none;
+
   display: grid;
   align-content: start;
 
@@ -14,7 +20,7 @@
     grid-template-columns: 1fr;
     grid-template-rows: repeat(8, auto);
 
-    border-right: 4px solid #000;
+    border-right: 3px solid #000;
 
     .indicator__unit{
       grid-row: span 3;

@@ -25,9 +25,11 @@ export default class Component {
 
   /**
    * Интерфейс компонента
-   * @return {void}
+   * @return {this}
    */
-  init() {}
+  init() {
+    return this
+  }
 
   /**
    * Скрывает компонент

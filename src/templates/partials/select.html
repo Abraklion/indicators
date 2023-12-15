@@ -3,16 +3,22 @@
 
   <div class="sContainer-fluid">
 
-    <form class="select__row sForm">
+    {{#ifpage 'indicators'}}
+      <form class="select__row sForm" id="form-indicator" method="POST">
+    {{/ifpage}}
 
-      <div class="select__col">
+    {{#ifpage 'edit-indicators'}}
+      <form class="select__row sForm" id="form-edit-indicator" method="POST">
+    {{/ifpage}}
+
+      <div class="select__col {{#ifpage 'indicators'}} js-loader {{/ifpage}}">
 
         {{#ifpage 'indicators'}}
         <div class="sForm__inner inner">
 
           <div class="sForm__item">
             <label class="sForm__label" for="year">Год</label>
-            <select class="sForm__select" name="year" id="year">
+            <select class="sForm__select js-select2" name="year" id="year">
               {{#each unit.year}}
                 <option class="sForm__option" value="{{this}}">{{this}}</option>
               {{/each}}
@@ -21,7 +27,7 @@
 
           <div class="sForm__item">
             <label class="sForm__label" for="month">Месяц</label>
-            <select class="sForm__select" name="month" id="month">
+            <select class="sForm__select js-select2" name="month" id="month">
               {{#each unit.month}}
                 <option class="sForm__option" value="{{this.n}}">{{this.name}}</option>
               {{/each}}
@@ -36,7 +42,7 @@
 
           <div class="sForm__item">
             <label class="sForm__label" for="division">Дивизион</label>
-            <select class="sForm__select" name="division" id="division">
+            <select class="sForm__select js-select2" name="division" id="division">
               {{#each unit.division}}
               <option class="sForm__option" value="{{this.n}}">{{this.name}}</option>
               {{/each}}
@@ -45,7 +51,7 @@
 
           <div class="sForm__item">
             <label class="sForm__label" for="year">Год</label>
-            <select class="sForm__select" name="year" id="year">
+            <select class="sForm__select js-select2" name="year" id="year">
               {{#each unit.year}}
               <option class="sForm__option" value="{{this}}">{{this}}</option>
               {{/each}}
@@ -57,7 +63,7 @@
 
       </div><!--/.select__col-->
 
-      <div class="select__col">
+      <div class="select__col {{#ifpage 'edit-indicators'}} select__col--pt {{/ifpage}}">
 
         {{#ifpage 'indicators'}}
           <div class="inner">
@@ -81,11 +87,11 @@
         {{/ifpage}}
 
         {{#ifpage 'edit-indicators'}}
-          <div class="sForm__inner inner">
+          <div class="sForm__inner inner inner--pt">
 
             <div class="sForm__item">
               <label class="sForm__label" for="indicator">Показатель</label>
-              <select class="sForm__select" name="indicator" id="indicator">
+              <select class="sForm__select js-select2" name="indicator" id="indicator">
                 {{#each indicators.basic}}
                   <option class="sForm__option" value="{{this}}">{{this}}</option>
                 {{/each}}
@@ -97,8 +103,9 @@
 
             <div class="sForm__item">
               <label class="sForm__label" for="type">Тип</label>
-              <select class="sForm__select" name="type" id="type" disabled>
-                <option class="sForm__option" value="type">Цель | План</option>
+              <select class="sForm__select js-select2" name="type" id="type">
+                <option class="sForm__option" value="type">Цель</option>
+                <option class="sForm__option" value="type">День</option>
               </select>
             </div><!--/.sForm__item-->
 
